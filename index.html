@@ -1,5 +1,18 @@
 ---
-layout: home
-# articles:
-#   excerpt_type: html
+layout: page
 ---
+
+<!--personal info-->
+<div id="about">
+  {%- include article/footer/author-profile.html
+    author=site.author -%}
+</div>
+
+<div id="pub">
+  <h2>Publications</h2>
+  {%- include publication-list.liquid -%}
+</div>
+
+<!--<div id="publications">-->
+<!--  {%- include article-list.html articles=_articles type='grid' size='sm' -%}-->
+<!--</div>-->
