@@ -5,6 +5,7 @@
 {% assign _desc = include.desc %}
 {% assign _paper_link = include.paper_link %}
 {% assign _code_link = include.code_link %}
+{% assign _alt_img = include.alt_img | default: "/assets/images/logo/logo.svg" %}
 
 {% assign _authors = _author | split: ', ' %}
 {% assign _author_list = "" | split:"/" %}
@@ -22,7 +23,7 @@
 <div class="item card">
   <div class="item__image">
     <div class="mt-2"></div>
-    <img class="image--xl" src={{ _img_path }}/>
+    <img class="image--xl" alt={{ _alt_img | prepend: site.baseurl }} src={{ _img_path | prepend: site.baseurl }} />
     <div class="mb-2"></div>
   </div>
   <div class="item__content">
