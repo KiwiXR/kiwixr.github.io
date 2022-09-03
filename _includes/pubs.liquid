@@ -23,7 +23,8 @@
 <div class="item card">
   <div class="item__image">
     <div class="mt-2"></div>
-    <img class="image--xl" alt={{ _alt_img | prepend: site.baseurl }} src={{ _img_path | prepend: site.baseurl }} />
+    <img class="image--xl" src={{ _img_path | prepend: site.baseurl }}
+         onerror="this.src='{{ _alt_img | prepend: site.baseurl }}';this.onerror=null;"/>
     <div class="mb-2"></div>
   </div>
   <div class="item__content">
