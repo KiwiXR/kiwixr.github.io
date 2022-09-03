@@ -1,9 +1,27 @@
-_site
-.sass-cache
+*~
+~*
+*.diff
+*.patch
+*.bak
 .DS_Store
-.jekyll-metadata
+*.swp
+*.swo
+*.log
+*.log.*
 
-# Ignore the config file that's used for gh-pages.
-_config.gh-pages.yml
+/.vscode/
 
+node_modules/
+.sass-cache/
+
+/.bundle/
+/vendor/bundle
+*.gem
+
+yarn.lock
+package-lock.json
 Gemfile.lock
+
+_site/
+.jekyll-metadata
+.jekyll-cache/

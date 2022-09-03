@@ -1,17 +1,17 @@
 language: ruby
-cache: bundler
 rvm:
- - 2.5
- - 2.6
- - 2.7
-script:
- - bundle exec jekyll build
- - rake 'draft[Hello\, world]'
- - rake undraft[hello-world.md]
- - grep johno/pixyll    _site/index.html
- - grep post-title      _site/index.html
- - grep pagination-item _site/index.html
- - grep href=.https://pixyll.com/. _site/index.html
- - grep johno/pixyll    _site/css/pixyll.css
- - grep 404             _site/404.html
- - grep pixyll.com/sitemap.xml _site/robots.txt
+  - 2.4.1
+branches:
+  only:
+  - master
+before_script: cp -rfv docs/_includes .
+script: JEKYLL_ENV=production bundle exec jekyll build --config ./docs/_config.yml
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: _site
+  keep-history: true
+  on:
+    branch: master
+    target_branch: gh-pages
