@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="846852d0-08bd-43fe-8ce9-d12255aed914" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/_includes/publication-list.liquid" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_layouts/publications.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_posts/2022-09-03-test.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/images/avatar/avatar.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_sass/common/components/_pcard.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/logo/arxiv.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_data/navigation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/navigation.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_sass/components/_author-profile.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/components/_author-profile.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/publication-list.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/pubs.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_sass/common/components/_card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/_sass/common/components/_card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -44,7 +44,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/BIT/ML/kiwixr.github.io/_posts",
+    "last_opened_file_path": "D:/BIT/ML/kiwixr.github.io/assets/images/logo",
     "nodejs_package_manager_path": "npm",
     "ruby.rails.projectView.checked": "true",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable"
@@ -52,6 +52,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\BIT\ML\kiwixr.github.io\assets\images\logo" />
+      <recent name="D:\BIT\ML\kiwixr.github.io\_sass\common\components" />
       <recent name="D:\BIT\ML\kiwixr.github.io\_posts" />
       <recent name="D:\BIT\ML\kiwixr.github.io\assets\images\avatar" />
     </key>
@@ -79,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1662166300866</updated>
-      <workItem from="1662166302109" duration="17279000" />
+      <workItem from="1662166302109" duration="27807000" />
     </task>
     <servers />
   </component>

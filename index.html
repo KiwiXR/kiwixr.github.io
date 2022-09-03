@@ -8,11 +8,20 @@ layout: page
     author=site.author -%}
 </div>
 
-<div id="pub">
+<div id="publication">
   <h2>Publications</h2>
-  {%- include publication-list.liquid -%}
-</div>
+
+  {% include pubs.liquid
+    img_path="assets/images/pubs/SePiCo.png"
+    title="SePiCo: Semantic-Guided Pixel Contrast for Domain Adaptive Semantic Segmentation"
+    status="arXiv preprint"
+    author="Binhui Xie, Shuang Li, Mingjia Li, Chi Harold Liu, Gao Huang, Guoren Wang"
+    desc="A novel one-stage adaptation framework that highlights the semantic concepts of individual pixel to promote learning of class-discriminative and class-balanced pixel embedding space across domains."
+    paper_link="https://arxiv.org/pdf/2204.08808"
+    code_link="https://github.com/BIT-DA/SePiCo"
+  %}
 
 <!--<div id="publications">-->
 <!--  {%- include article-list.html articles=_articles type='grid' size='sm' -%}-->
 <!--</div>-->
+</div>

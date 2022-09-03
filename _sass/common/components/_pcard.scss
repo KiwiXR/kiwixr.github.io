@@ -1,0 +1,20 @@
+.pcard {
+  max-width: 75rem;
+  border-radius: map-get($base, border-radius);
+  @include box-shadow();
+  @include transition(box-shadow map-get($animation, duration) map-get($animation, timing-function));
+  & > :first-child {
+    border-top-left-radius: map-get($base, border-radius);
+    border-top-right-radius: map-get($base, border-radius);
+  }
+  & > :last-child {
+    border-bottom-right-radius: map-get($base, border-radius);
+    border-bottom-left-radius: map-get($base, border-radius);
+  }
+}
+
+.cell {
+  & > .pcard {
+    max-width: unset;
+  }
+}

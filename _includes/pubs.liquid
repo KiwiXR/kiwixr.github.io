@@ -1,0 +1,50 @@
+{% assign _img_path = include.img_path %}
+{% assign _title = include.title %}
+{% assign _status = include.status %}
+{% assign _author = include.author %}
+{% assign _desc = include.desc %}
+{% assign _paper_link = include.paper_link %}
+{% assign _code_link = include.code_link %}
+
+{% assign _authors = _author | split: ', ' %}
+{% assign _author_list = "" | split:"/" %}
+{% for a in _authors %}
+  {% assign b = a %}
+  {% if a == 'Mingjia Li'%}
+    {% assign b = b | prepend: '<b><i>' | append: '</i></b>' %}
+  {% endif %}
+  {% assign _author_list = _author_list | push: b %}
+{% endfor %}
+{% assign _author = _author_list | join: ', '%}
+
+<div class="mt-4"></div>
+
+<div class="item card">
+  <div class="item__image">
+    <div class="mt-2"></div>
+    <img class="image--xl" src={{ _img_path }}/>
+    <div class="mb-2"></div>
+  </div>
+  <div class="item__content">
+    <div class="mt-2"></div>
+    <div class="item__header">
+      <h4>{{ _title }}</h4>
+    </div>
+    <div class="item__meta">
+      <u><i>{{ _status }}</i></u>
+    </div>
+    <div class="item__description">
+      <p>{{ _author }}</p>
+      <div class="mt-2"></div>
+      <p>{{ _desc }}</p>
+    </div>
+    <div>
+      <a href={{ _paper_link }}>
+        <img src="https://img.shields.io/badge/paper-%23B31B1B?stype=flat"></a>
+      &nbsp;
+      <a href={{ _code_link }}>
+        <img src="https://img.shields.io/badge/code-%23181717?style=flat&logo=github"></a>
+    </div>
+    <div class="mb-2"></div>
+  </div>
+</div>
