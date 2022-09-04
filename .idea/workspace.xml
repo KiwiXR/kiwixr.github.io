@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="846852d0-08bd-43fe-8ce9-d12255aed914" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/kiwixr.github.io.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kiwixr.github.io.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/pubs.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/pubs.liquid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_data/locale.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_data/locale.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +40,10 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/BIT/ML/kiwixr.github.io/assets/images/logo",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "D:\\BIT\\ML\\kiwixr.github.io\\node_modules\\stylelint",
     "nodejs_package_manager_path": "npm",
     "ruby.rails.projectView.checked": "true",
     "settings.editor.selected.configurable": "org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable"
@@ -78,7 +82,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1662166300866</updated>
-      <workItem from="1662166302109" duration="31701000" />
+      <workItem from="1662166302109" duration="32525000" />
+      <workItem from="1662258762785" duration="407000" />
     </task>
     <servers />
   </component>
