@@ -1,0 +1,21 @@
+---
+layout: default
+hide_default_title: false
+hide_default_authors: false
+hide_default_links: false
+---
+{% unless page.hide_default_title %}
+    {% include title.html %}
+{% endunless %}
+{% unless page.hide_default_authors %}
+    <div class="gap-20"></div>
+    {% include authors.html authors=page.authors %}
+    <hr>
+{% endunless %}
+{% unless page.hide_default_links %}
+    <div class="gap-10"></div>
+    {% include links.html links=page.links accept=page.accept %}
+    <div class="gap-10"></div>
+    <hr>
+{% endunless %}
+{{ page.content | markdownify }}

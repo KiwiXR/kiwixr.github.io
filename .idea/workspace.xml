@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="846852d0-08bd-43fe-8ce9-d12255aed914" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/_includes/authors.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/links.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_includes/title.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_layouts/project.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_projects/example.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_projects/vblc.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/_sass/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,28 +41,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/BIT/ML/kiwixr.github.io/assets/images/logo&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;D:\\BIT\\ML\\kiwixr.github.io\\node_modules\\stylelint&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ruby.rails.projectView.checked&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "G:/Seattle/kiwixr.github.io/assets/css",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "D:\\BIT\\ML\\kiwixr.github.io\\node_modules\\stylelint",
+    "nodejs_package_manager_path": "npm",
+    "ruby.rails.projectView.checked": "true",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.ruby.settings.RubyActiveModuleSdkConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\BIT\ML\kiwixr.github.io\assets\images\logo" />
-      <recent name="D:\BIT\ML\kiwixr.github.io\_sass\common\components" />
-      <recent name="D:\BIT\ML\kiwixr.github.io\_posts" />
-      <recent name="D:\BIT\ML\kiwixr.github.io\assets\images\avatar" />
+      <recent name="G:\Seattle\kiwixr.github.io\assets\css" />
+      <recent name="G:\Seattle\kiwixr.github.io\_sass" />
+      <recent name="G:\Seattle\kiwixr.github.io" />
+      <recent name="G:\Seattle\kiwixr.github.io\_includes" />
+      <recent name="G:\Seattle\kiwixr.github.io\_layouts" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\BIT\ML\kiwixr.github.io\assets\images\pubs" />

@@ -1,0 +1,59 @@
+{% assign all_author = "" | split: "" %}
+{% assign all_link = "" | split: "" %}
+{% assign all_affiliation = "" | split: "" %}
+{% assign has_equal = false %}
+{% assign author_list = include.authors | replace: '*', '' | replace: ' ', '' | split: ',' %}
+
+{% for i_author in author_list %}
+  {% for author in site.authors %}
+    {% if author.index_name == i_author %}
+      {% assign current_author = author.name %}
+      {% assign equal_contrib = author.index_name | append: "*" %}
+      {% if include.authors contains equal_contrib %}
+        {% assign current_author = current_author | append: "$$^*$$" %}
+        {% assign has_equal = true %}
+      {% endif %}
+      {% assign all_link = all_link | push: author.link %}
+      {% for aff in author.affiliations %}
+        {% unless forloop.first %}
+          {% assign current_author = current_author | append: "$$^,$$" %}
+        {% endunless %}
+        {% if all_affiliation contains aff %}
+          {% for recorded_aff in all_affiliation %}
+            {% if recorded_aff == aff %}
+              {% assign current_author = current_author | append: "$$^" | append: forloop.index | append: "$$" %}
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          {% assign all_affiliation = all_affiliation | push: aff %}
+          {% assign current_author = current_author | append: "$$^" | append: all_affiliation.size | append: "$$" %}
+        {% endif %}
+      {% endfor %}
+      {% assign all_author = all_author | push: current_author %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+<center>
+  <span style="font-size:20px">
+{% for author in all_author %}
+    &nbsp;
+    <div style="display:inline-block">
+    <a href="{{ all_link[forloop.index0] }}">{{ author | markdownify }}</a>
+    </div>
+{% endfor %}
+  </span>
+</center>
+<div class="gap-5"></div>
+<div class="row">
+  {% for aff in all_affiliation %}
+  <div class="col-md-3">
+    <center><span style="font-size:20px">
+          {{ "$$^" | append: forloop.index | append: "$$" | append: aff | markdownify }}
+    </span></center>
+  </div>
+  {% endfor %}
+</div>
+{% if has_equal %}
+  <p>* equal contribution</p>
+{% endif %}
