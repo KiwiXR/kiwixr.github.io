@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="846852d0-08bd-43fe-8ce9-d12255aed914" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/_includes/authors.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/links.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_includes/title.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_layouts/default.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_layouts/project.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_projects/example.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_projects/vblc.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/_sass/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/_config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_includes/authors.html" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/authors.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +38,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "G:/Seattle/kiwixr.github.io/assets/css",
+    "last_opened_file_path": "G:/Seattle/kiwixr.github.io",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -59,9 +50,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Seattle\kiwixr.github.io" />
       <recent name="G:\Seattle\kiwixr.github.io\assets\css" />
       <recent name="G:\Seattle\kiwixr.github.io\_sass" />
-      <recent name="G:\Seattle\kiwixr.github.io" />
       <recent name="G:\Seattle\kiwixr.github.io\_includes" />
       <recent name="G:\Seattle\kiwixr.github.io\_layouts" />
     </key>

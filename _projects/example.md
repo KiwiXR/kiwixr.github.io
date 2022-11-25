@@ -1,6 +1,6 @@
 ---
 layout: project
-authors: mingjiali*, binhuixie*, shuangli, chiharoldliu, xinjingcheng
+authors: mingjiali*, binhuixie*, shuangli@, chiharoldliu, xinjingcheng
 title: "VBLC: Visibility Boosting and Logit-Constraint Learning for Domain Adaptive Semantic Segmentation under Adverse Conditions"
 tab_title: VBLC
 accept:
