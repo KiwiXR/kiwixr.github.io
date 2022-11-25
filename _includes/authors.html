@@ -2,7 +2,7 @@
 {% assign all_link = "" | split: "" %}
 {% assign all_affiliation = "" | split: "" %}
 {% assign has_equal = false %}
-{% assign has_corr = true %}
+{% assign corr = false %}
 {% assign author_list = include.authors | replace: '*', '' | replace: '@', '' | replace: ' ', '' | split: ',' %}
 
 {% for i_author in author_list %}
@@ -11,28 +11,33 @@
 {% assign current_author = author.name %}
 {% assign equal_contrib = author.index_name | append: "*" %}
 {% if include.authors contains equal_contrib %}
-{% assign current_author = current_author | append: "$$^*$$" %}
+{% assign current_author = current_author | append: "$^*$" %}
 {% assign has_equal = true %}
 {% endif %}
 {% assign corr_author = author.index_name | append: "@" %}
 {% if include.authors contains corr_author %}
-{% assign current_author = current_author | append: "<sup>&#x2709;</sup>" %}
+{% assign current_author = current_author | append: "<sup>&#9993;</sup>" %}
 {% assign has_corr = true %}
 {% endif %}
 {% assign all_link = all_link | push: author.link %}
 {% for aff in author.affiliations %}
-{% unless forloop.first %}
-{% assign current_author = current_author | append: "$$^,$$" %}
-{% endunless %}
+{% if forloop.first %}
+{% assign current_author = current_author | append: "$^{" %}
+{% endif %}
 {% if all_affiliation contains aff %}
 {% for recorded_aff in all_affiliation %}
 {% if recorded_aff == aff %}
-{% assign current_author = current_author | append: "$$^" | append: forloop.index | append: "$$" %}
+{% assign current_author = current_author | append: forloop.index %}
 {% endif %}
 {% endfor %}
 {% else %}
 {% assign all_affiliation = all_affiliation | push: aff %}
-{% assign current_author = current_author | append: "$$^" | append: all_affiliation.size | append: "$$" %}
+{% assign current_author = current_author | append: all_affiliation.size %}
+{% endif %}
+{% if forloop.last %}
+{% assign current_author = current_author | append: "}$" %}
+{% else %}
+{% assign current_author = current_author | append: "," %}
 {% endif %}
 {% endfor %}
 {% assign all_author = all_author | push: current_author %}
@@ -41,36 +46,35 @@
 {% endfor %}
 
 <center>
-  <span style="font-size:20px">
-{% for author in all_author %}
-    &nbsp;
-    <div style="display:inline-block">
-    <a href="{{ all_link[forloop.index0] }}">{{ author | markdownify }}</a>
-    </div>
-{% endfor %}
+  <span style="font-size:22px">
+    {% for author in all_author %}
+        &nbsp;
+        <div style="display:inline-block;">
+        <a href="{{ all_link[forloop.index0] }}">{{ author | markdownify }}</a>
+        </div>
+    {% endfor %}
   </span>
 </center>
+
 <div class="gap-5"></div>
 <div class="row">
   {% for aff in all_affiliation %}
-  <div class="col-md-3">
-    <center><span style="font-size:20px">
-          {{ "$$^" | append: forloop.index | append: "$$" | append: aff | markdownify }}
+  <center><span style="font-size:20px">
+      {{ "$^" | append: forloop.index | append: "$" | append: aff | markdownify }}
     </span></center>
-  </div>
   {% endfor %}
 </div>
 
 <center>
   {% if has_equal %}
   <div style="display:inline-block">
-    {{ "$$^*$$ equal contribution" | markdownify }}
+    {{ "$^*$ equal contribution" | markdownify }}
   </div>
   {% endif %}
   {% if has_corr %}
   &nbsp;&nbsp;
   <div style="display:inline-block">
-    <sup>&#x2709;</sup> corresponding author
+    <sup>&#9993;</sup> corresponding author
   </div>
   {% endif %}
 </center>

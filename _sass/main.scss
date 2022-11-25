@@ -31,3 +31,12 @@ hr {
   width:100%;
   height:5px;
 }
+
+a:link{
+  text-decoration:none;
+}
+
+a:hover{
+  text-decoration:blink;
+  color:orange;
+}
