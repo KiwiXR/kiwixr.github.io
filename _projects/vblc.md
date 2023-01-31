@@ -15,6 +15,9 @@ links:
     poster@dropbox: https://www.dropbox.com/s/pvb2701k2gr9cfb/aaai23poster.pdf?dl=0
 ---
 
+| ![motivation](/assets/images/vblc/night.gif "Night"){:width="100%"} | ![motivation](/assets/images/vblc/rain.gif "Rain"){:width="100%"} |
+| ![motivation](/assets/images/vblc/fog.gif "Fog"){:width="100%"} | ![motivation](/assets/images/vblc/snow.gif "Snow"){:width="100%"} |
+
 ## Abstract
 
 Generalizing models trained on normal visual conditions to target domains under adverse conditions is demanding in the
@@ -41,7 +44,7 @@ And different adverse conditions are handled separately.
 
 In VBLC, we manage to achieve adaptation **without** the reliance on paired images, and take a step further to handle **multiple** adverse weather conditions with a **single** trained model.
 
-![motivation](../assets/images/vblc/motivation.png){:width="100%"}
+![motivation](/assets/images/vblc/motivation.png){:width="100%"}
 
 ---
 
@@ -49,7 +52,7 @@ In VBLC, we manage to achieve adaptation **without** the reliance on paired imag
 
 VBLC yields high-quality segmentation results even under a mixure of adverse weather conditions. The effectiveness of our method can be attribute to both Visibility Boost Module (VBM) and Logit-Constraint Learning (LCL).
 
-![seg_map](../assets/images/vblc/seg_map.png){:width="100%"}
+![seg_map](/assets/images/vblc/seg_map.png){:width="100%"}
 
 ---
 

@@ -20,7 +20,7 @@ aff_mode: "full" / "simple" / "hide" / omit
 
 # Project Page Example
 
-> Also refer to [projects/vblc(.html)](../projects/vblc) or [_projects/vblc.md](../_projects/vblc.md).
+> Also refer to [projects/vblc(.html)](/projects/vblc) or [_projects/vblc.md](../_projects/vblc.md).
 
 ## Sample Title
 This is Markdown, and I can write $\LaTeX$ here.
