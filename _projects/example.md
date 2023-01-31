@@ -20,7 +20,7 @@ aff_mode: "full" / "simple" / "hide" / omit
 
 # Project Page Example
 
-> Also refer to [projects/vblc(.html)](../projects/vblc) or [_projects/vblc.md](../_projects/vblc.md)
+> Also refer to [projects/vblc(.html)](../projects/vblc) or [_projects/vblc.md](../_projects/vblc.md).
 
 ## Sample Title
 This is Markdown, and I can write $\LaTeX$ here.
@@ -33,5 +33,5 @@ This is Markdown's divider, not `<hr>`!
 
 ---
 
-Ref:
-> I guess providing a handful of `_includes` templates is an awesome idea, and let's do it!
+TODO:
+> Maybe providing a handful of `_includes` templates is a good idea.
