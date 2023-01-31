@@ -18,6 +18,8 @@ links:
 | ![motivation](/assets/images/vblc/night.gif "Night"){:width="100%"} | ![motivation](/assets/images/vblc/rain.gif "Rain"){:width="100%"} |
 | ![motivation](/assets/images/vblc/fog.gif "Fog"){:width="100%"} | ![motivation](/assets/images/vblc/snow.gif "Snow"){:width="100%"} |
 
+---
+
 ## Abstract
 
 Generalizing models trained on normal visual conditions to target domains under adverse conditions is demanding in the
