@@ -5,11 +5,11 @@ authors: MyAuthors
 ---
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ page.tab_title | default: page.title }}</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <script type="text/x-mathjax-config">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ page.tab_title | default: page.title }}</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
         skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
@@ -18,11 +18,11 @@ authors: MyAuthors
       }
     });
     </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 </head>
 <div class="container">
-<body>
-{{ content }}
-</body>
+  <body style="max-width:900px;">
+  {{ content }}
+  </body>
 </div>
 </html>
