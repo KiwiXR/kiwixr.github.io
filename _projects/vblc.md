@@ -39,7 +39,7 @@ FoggyCityscapes + RainCityscapes, verify the effectiveness of VBLC, where it est
 Previous attempts on normal-to-adverse domain adaptation mostly require paired images for reference.
 And different adverse conditions are handled separately.
 
-In VBLC, we manage to achieve adaptation **without** the reliant on paired images, and take a step further to handle **multiple** adverse weather conditions with a **single** trained model.
+In VBLC, we manage to achieve adaptation **without** the reliance on paired images, and take a step further to handle **multiple** adverse weather conditions with a **single** trained model.
 
 ![motivation](../assets/images/vblc/motivation.png){:width="100%"}
 
