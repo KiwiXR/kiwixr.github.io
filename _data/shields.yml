@@ -1,0 +1,27 @@
+default:
+  color: D80082
+  name: nil
+
+arxiv:
+  color: B31B1B
+  name: arXiv
+
+github:
+  color: 181717
+  name: GitHub
+
+youtube:
+  color: FF0000
+  name: YouTube
+
+bilibili:
+  color: 00A1D6
+  name: Bilibili
+
+dropbox:
+  color: 0061FF
+  name: Dropbox
+
+googledrive:
+  color: 4285F4
+  name: Google Drive

@@ -1,14 +1,16 @@
 <center>
 <a href="{{ include.accept.link }}"><img src="https://img.shields.io/badge/-{{ include.accept.name }}-%23F68D2E?style=for-the-badge" alt="source" style="max-width: 100%;"></a>
 {% for link in include.links %}
-  &nbsp;&nbsp;
-  {% case link[0] %}
-  {% when "arXiv" %}
-    <a href="{{ link[1] }}"><img src="https://img.shields.io/badge/-arXiv-%23B31B1B?style=for-the-badge" alt="arXiv" style="max-width: 100%;"></a>
-  {% when "code" %}
-    <a href="{{ link[1] }}"><img src="https://img.shields.io/badge/-github-%23181717?style=for-the-badge" alt="code" style="max-width: 100%;"></a>
-  {% else %}
-    [<a href="{{ link[1] }}">{{ link[0] }}</a>]
-  {% endcase %}
+  &nbsp;&nbsp;&nbsp;
+  {% assign link_meta = link[0] | split: '@' %}
+  {% assign link_attr = link_meta.first %}
+  {% assign link_name = link_meta.last %}
+  {% assign link_key = link_name | downcase %}
+  {% assign cfg = site.data.shields[link_key] %}
+  {% if cfg == nil %}
+    {% assign cfg = site.data.shields.default %}
+    {% assign cfg.name = link_meta[1] %}
+  {% endif %}
+  <a href="{{ link[1] }}"><img src="https://img.shields.io/badge/-{{ link_attr }}-%23{{ cfg.color }}?style=for-the-badge&logo={{ link_key }}&labelColor=555" alt="{{ cfg.name }}" style="max-width: 100%;"></a>
 {% endfor %}
 </center>

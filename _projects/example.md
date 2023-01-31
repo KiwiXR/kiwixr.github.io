@@ -7,11 +7,13 @@ accept:
     name: AAAI23
     link: https://aaai.org/Conferences/AAAI-23
 links:
-    arXiv: https://arxiv.org/abs/2211.12256
-    code: https://github.com/BIT-DA/VBLC
+    paper@arxiv: https://arxiv.org/abs/2211.12256
+    code@github: https://github.com/BIT-DA/VBLC
 ---
+> aff_mode: "full" / "simple" / "hide" / omit
+
 ## Sample Title
-This is Markdown, and I can write $$\LaTeX$$ here.
+This is Markdown, and I can write $\LaTeX$ here.
 
 - Now let's show the ***links*** again!
 

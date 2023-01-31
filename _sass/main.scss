@@ -1,15 +1,29 @@
 body {
-  font-family: Arial, serif;
-  font-size:20px;
+  font-family: Arial, serif, sans-serif;
+  font-size: 20px;
   margin:60px auto;
   width:auto;
   max-width:900px;
+  text-align:justify;
+  text-justify:distribute-all-lines;
 }
 
 hr {
   border:0;
   height:1.0px;
   background-image:linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+pre.highlight {
+  text-align: left;
+}
+
+p {
+  margin: 5px;
 }
 
 .gap-30 {

@@ -9,13 +9,13 @@ hide_default_links: false
 {% endunless %}
 {% unless page.hide_default_authors %}
     <div class="gap-20"></div>
-    {% include authors.html authors=page.authors %}
+    {% include authors.html authors=page.authors aff_mode=page.aff_mode %}
     <hr>
 {% endunless %}
 {% unless page.hide_default_links %}
-    <div class="gap-10"></div>
+    <div class="gap-5"></div>
     {% include links.html links=page.links accept=page.accept %}
-    <div class="gap-10"></div>
+    <div class="gap-5"></div>
     <hr>
 {% endunless %}
 {{ page.content | markdownify }}
