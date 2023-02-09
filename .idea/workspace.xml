@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="846852d0-08bd-43fe-8ce9-d12255aed914" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/images/pubs/VBLC.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/_includes/pubs.liquid" beforeDir="false" afterPath="$PROJECT_DIR$/_includes/pubs.liquid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,11 +53,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Seattle\kiwixr.github.io\assets\images\pubs" />
       <recent name="E:\Seattle\kiwixr.github.io\assets\images" />
       <recent name="E:\Seattle\kiwixr.github.io\assets\images\vblc" />
       <recent name="E:\Seattle\kiwixr.github.io\_authors" />
       <recent name="E:\Seattle\kiwixr.github.io\_data" />
-      <recent name="E:\Seattle\kiwixr.github.io\_includes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\BIT\ML\kiwixr.github.io\assets\images\pubs" />
@@ -97,7 +94,7 @@
       <workItem from="1675143345205" duration="1213000" />
       <workItem from="1675146359610" duration="4408000" />
       <workItem from="1675153564076" duration="2394000" />
-      <workItem from="1675903305257" duration="826000" />
+      <workItem from="1675903305257" duration="1127000" />
     </task>
     <servers />
   </component>
