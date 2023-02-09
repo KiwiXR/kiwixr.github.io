@@ -11,7 +11,7 @@
 {% assign _author_list = "" | split:"/" %}
 {% for a in _authors %}
   {% assign b = a %}
-  {% if a == 'Mingjia Li'%}
+  {% if a == 'Mingjia Li' or a == 'Mingjia Li*' %}
     {% assign b = b | prepend: '<b><i>' | append: '</i></b>' %}
   {% endif %}
   {% assign _author_list = _author_list | push: b %}
@@ -40,7 +40,7 @@
       <u><i>{{ _status }}</i></u>
     </div>
     <div class="item__description">
-      <p>{{ _author }}</p>
+      <p>{{ _author | markdownify }}</p>
       <div class="mt-2"></div>
       <p>{{ _desc }}</p>
     </div>
