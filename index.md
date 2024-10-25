@@ -2,6 +2,4 @@
 layout: default
 ---
 
-<hello-world></hello-world>
-
-> from markdown
+<my-element></my-element>

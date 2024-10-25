@@ -6,13 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     {% include webpack-scripts.html %}
     <title>Example Title</title>
+    <script src="https://unpkg.com/vue@next"></script>
 </head>
 
 <body>
-<div id="app">
-    <hello-world></hello-world>
-    <p>from layouts</p>
-
+<div id="app1">
+    {{ content }}
+</div>
+<div id="app2">
     {{ content }}
 </div>
 </body>

@@ -1,0 +1,3 @@
+<% for (var jsFile in htmlWebpackPlugin.files.js) { %>
+<script defer src="<%= htmlWebpackPlugin.files.js[jsFile] %>"></script>
+<% } %>
