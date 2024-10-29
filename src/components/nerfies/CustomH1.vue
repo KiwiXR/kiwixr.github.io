@@ -1,10 +1,11 @@
 <template>
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Abstract. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h1 v-bind="parsedH1Attrs" class="title is-3 e-h1-warn">Refuse to render {<em><slot></slot></em>}: # or &lt;h1&gt; not supported</h1>
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><slot></slot></h1>
+          </div>
         </div>
       </div>
     </div>
@@ -28,6 +29,15 @@ const parsedH1Attrs = computed(() => parseAttributes(props.attr_h1));
 </script>
 
 <style scoped>
+.hero {
+  padding-bottom: 0;
+}
+h1 {
+  margin-bottom: 1.5rem;
+}
+.column {
+  padding-bottom: 0;
+}
 .e-h1-warn {
   //background: violet;
   color: mediumvioletred;

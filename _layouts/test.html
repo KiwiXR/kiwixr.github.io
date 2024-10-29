@@ -1,15 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    {% include webpack-scripts.html %}
-    <title>Example Title</title>
-    <script src="https://unpkg.com/vue@next"></script>
-</head>
-<body>
-
+---
+layout: default
+hide_default_title: false
+hide_default_authors: false
+hide_default_links: false
+---
 <div id="nerfies">
     <nav-bar
             home-link="https://keunhong.com"
@@ -21,14 +15,9 @@
             ]"
     ></nav-bar>
     {{ content }}
+
+    {% unless page.hide_default_authors %}
+    {% include author-list.html authors=page.authors aff_mode=page.aff_mode %}
+    <hr>
+    {% endunless %}
 </div>
-
-<!--<div id="app1">-->
-<!--    {{ content }}-->
-<!--</div>-->
-<!--<div id="app2">-->
-<!--    {{ content }}-->
-<!--</div>-->
-
-</body>
-</html>

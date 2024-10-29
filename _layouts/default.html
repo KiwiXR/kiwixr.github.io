@@ -6,7 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     {% include webpack-scripts.html %}
     <title>Example Title</title>
-    <script src="https://unpkg.com/vue@next"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$'], ['\\(','\\)']],
+            processEscapes: true
+          }
+        });
+    </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 </head>
 
 <body>

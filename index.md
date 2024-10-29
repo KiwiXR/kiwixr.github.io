@@ -1,6 +1,20 @@
 ---
 layout: test
+authors: mingjiali*, binhuixie*, shuangli@, chiharoldliu, xinjingcheng
+tab_title: VBLC
+aff_mode: "simple"
+accept:
+  name: AAAI23 Oral
+  link: https://aaai.org/Conferences/AAAI-23
+links:
+  paper@arxiv: https://arxiv.org/abs/2211.12256
+  code@github: https://github.com/BIT-DA/VBLC
+  video@youtube: https://www.youtube.com/watch?v=o0voyaQ3FzM
+  video@bilibili: https://www.bilibili.com/video/av692744964
+  poster@dropbox: https://www.dropbox.com/s/pvb2701k2gr9cfb/aaai23poster.pdf?dl=0
 ---
+
+# VBLC: Visibility Boosting and Logit-Constraint Learning for Domain Adaptive Semantic Segmentation under Adverse Conditions
 
 ## Abstract
 
@@ -18,3 +32,7 @@ We show that Nerfies can turn casually captured selfie photos/videos into deform
   year      = {2021},
 }
 ```
+
+$\tau~inline~latex$
+
+$$\textbf{single-line latex}$$
