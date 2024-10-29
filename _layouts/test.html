@@ -8,13 +8,27 @@
     <title>Example Title</title>
     <script src="https://unpkg.com/vue@next"></script>
 </head>
-
 <body>
-<div id="app1">
+
+<div id="nerfies">
+    <nav-bar
+            home-link="https://keunhong.com"
+            :dropdown-items="[
+                { link: 'https://hypernerf.github.io', text: 'HyperNeRF' },
+                { link: 'https://nerfies.github.io', text: 'Nerfies' },
+                { link: 'https://latentfusion.github.io', text: 'LatentFusion' },
+                { link: 'https://photoshape.github.io', text: 'PhotoShape' }
+            ]"
+    ></nav-bar>
     {{ content }}
 </div>
-<div id="app2">
-    {{ content }}
-</div>
+
+<!--<div id="app1">-->
+<!--    {{ content }}-->
+<!--</div>-->
+<!--<div id="app2">-->
+<!--    {{ content }}-->
+<!--</div>-->
+
 </body>
 </html>

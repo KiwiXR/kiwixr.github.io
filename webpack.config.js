@@ -2,13 +2,14 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const path = require('path')
 const webpack = require('webpack') // eslint-disable-line
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader')
 
 module.exports = {
     entry: './src/main.js',
     output: {
         path: path.resolve(__dirname, './dist'),
-        publicPath: '/dist',
+        publicPath: '/dist/',
         filename: '[name].[chunkhash].js'
     },
     optimization: {
@@ -28,7 +29,12 @@ module.exports = {
         rules: [
             {
                 test: /\.vue$/,
-                loader: 'vue-loader'
+                loader: 'vue-loader',
+                options: {
+                    compilerOptions: {
+                        whitespace: 'preserve', // Preserve whitespace in Vue templates
+                    },
+                },
             },
             {
                 test: /\.css$/,
@@ -52,10 +58,35 @@ module.exports = {
                     /node_modules/.test(file) &&
                     !/\.vue\.js/.test(file)
                 )
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf|svg)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]',
+                            outputPath: 'fonts/', // where to put the fonts in the output directory
+                        },
+                    },
+                ],
             }
         ]
     },
     plugins: [
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, 'src/assets'), // Source directory
+                    to: path.resolve(__dirname, 'dist/assets'),   // Destination in dist
+                },
+                // {
+                //     from: '**/main.js', // Use just the glob pattern relative to context
+                //     to: 'components/[path][name].js', // Retain folder structure in dist
+                //     context: path.resolve(__dirname, 'src/components'), // Set context to the base directory
+                // },
+            ],
+        }),
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             filename: './../_includes/webpack-scripts.html',
@@ -66,7 +97,9 @@ module.exports = {
     ],
     resolve: {
         alias: {
-            vue$: 'vue/dist/vue.esm-bundler.js'
+            vue$: 'vue/dist/vue.esm-bundler.js',
+            '@assets': path.resolve(__dirname, 'src/assets/'),
+            '@': path.resolve(__dirname, 'src'),
         },
         extensions: ['*', '.js', '.vue', '.json']
     }
