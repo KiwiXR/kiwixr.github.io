@@ -4,7 +4,9 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+            <div class="publication-links">
+              <slot></slot>
+            </div>
           </div>
         </div>
       </div>
@@ -17,5 +19,8 @@
 </script>
 
 <style scoped>
-
+.hero-body {
+  padding-top: 24px;
+  padding-bottom: 0;
+}
 </style>

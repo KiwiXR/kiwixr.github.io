@@ -23,15 +23,18 @@ module Jekyll
 
         # Fetch defined components for this div
         defined_components = fetch_defined_components(components_dir)
+        # Whitelist components shall not be processed
+        whitelist_components = fetch_whitelist_components(components_dir)
+        # print(whitelist_components)
         # defined_components = [["h1"]]
         # print(defined_components)
         # Process tags inside this div
-        process_components_in_div(div, defined_components)
+        process_components_in_div(div, defined_components, whitelist_components)
       end
 
       # Convert the document back to HTML
       modified_content = doc.to_html
-      puts modified_content
+      # puts modified_content
       modified_content
     end
 
@@ -48,9 +51,21 @@ module Jekyll
       end.compact
     end
 
-    def self.process_components_in_div(div, component_tags_list)
+    def self.fetch_whitelist_components(components_dir)
+      Dir.glob(File.join(components_dir, '*.vue')).map do |file|
+        filename = File.basename(file, '.vue')
+        next if filename.start_with?('Custom')
+
+        # Extract the tag chain from the filename
+        # For example, 'CustomPreCode' => ['pre', 'code']
+        tags = filename.split(/(?=[A-Z])/).join('-').downcase
+        tags
+      end.compact
+    end
+
+    def self.process_components_in_div(div, component_tags_list, component_whitelist)
       component_tags_list.each do |tags|
-        process_tag_chains(div, tags)
+        process_tag_chains(div, tags, component_whitelist)
       end
     end
 
@@ -93,11 +108,13 @@ module Jekyll
       return res
     end
 
-    def self.process_tag_chains(div, tags)
+    def self.process_tag_chains(div, tags, component_whitelist)
       # recursively search for tags
       queue = [div]
       until queue.empty?
         node = queue.shift
+
+        next if component_whitelist.include?(node.name)
 
         # process
         if node.name == tags.first

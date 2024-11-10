@@ -55,41 +55,39 @@
 {% endfor %}
 {% endfor %}
 
-<center>
-    <div style="font-size:20px">
-        {% for author in all_author %}
-        &nbsp;
-        <div style="display:inline-block;">
-            <a href="{{ all_link[forloop.index0] }}">{{ author | markdownify }}</a>
-        </div>
-        {% endfor %}
-    </div>
-</center>
+<div class="is-size-5 publication-authors">
+    {% for author in all_author %}
+    &nbsp;&nbsp;
+    <span class="author-block">
+        <a href="{{ all_link[forloop.index0] }}">{{ author | markdownify }}</a>
+    </span>
+    {% endfor %}
+</div>
 
 {% unless aff_mode == "hide" %}
-<center>
-    <div style="font-size:20px">
-        {% for aff in all_affiliation %}
-        <div style="display:inline-flex">
-            <sup>{{ forloop.index }}</sup> {{ aff | markdownify }}
-        </div>
-        {% endfor %}
+    <div class="is-size-5 publication-authors">
+    {% for aff in all_affiliation %}
+        {% assign local_aff = "<sup>" | append: forloop.index | append: "</sup> " | append: aff %}
+        <span class="author-block">{{ local_aff | markdownify }}</span>
+    {% endfor %}
     </div>
-</center>
 {% endunless %}
 
-<center>
-    <div style="font-size:20px">
-        {% if has_equal %}
-        <div style="display:inline-block">
-            <sup>*</sup> equal contribution
-        </div>
-        {% endif %}
-        {% if has_corr %}
-        &nbsp;&nbsp;
-        <div style="display:inline-block">
-            <sup>&#9993;</sup> corresponding author
-        </div>
-        {% endif %}
-    </div>
-</center>
+{% if has_equal or has_corr %}
+<div class="is-size-5 publication-authors">
+{% endif %}
+{% if has_equal %}
+<span class="author-block">
+    <sup>*</sup> equal contribution
+</span>
+{% endif %}
+&nbsp;&nbsp;
+{% if has_corr %}
+<span class="author-block">
+    <sup>&#9993;</sup> corresponding author
+</span>
+{% endif %}
+{% if has_equal or has_corr %}
+</div>
+{% endif %}
+

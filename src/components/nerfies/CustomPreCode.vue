@@ -31,4 +31,8 @@ const parsedCodeAttrs = computed(() => parseAttributes(props.attr_code)); // Use
 .custom-code {
   font-family: monospace; /* Ensure it inherits font-family from body */
 }
+.section {
+  padding-bottom: 24px;
+  padding-top: 24px;
+}
 </style>

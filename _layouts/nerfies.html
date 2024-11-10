@@ -1,0 +1,36 @@
+---
+layout: default
+hide_default_title: false
+hide_default_authors: false
+hide_default_links: false
+---
+
+<div id="nerfies">
+    {% assign dropdownItems = '' %}
+    {% for pair in page.more_work %}
+    {% assign name = pair[0] %}
+    {% assign url = pair[1] %}
+    {% assign dropdownItems = dropdownItems | append: '{ "link": "' | append: url | append: '", "text": "' | append: name | append: '" }' %}
+    {% unless forloop.last %}
+    {% assign dropdownItems = dropdownItems | append: ', ' %}
+    {% endunless %}
+    {% endfor %}
+
+    <nav-bar
+            home-link="{{ page.home_link }}"
+            :dropdown-items='[{{ dropdownItems }}]'>
+    </nav-bar>
+
+    <my-title>{{ page.title }}</my-title>
+    <author-list>
+        {% unless page.hide_default_authors %}
+        {% include author-list.html authors=page.authors aff_mode=page.aff_mode %}
+        {% endunless %}
+    </author-list>
+    <link-list>
+        {% unless page.hide_default_links %}
+        {% include links.html links=page.links accept=page.accept %}
+        {% endunless %}
+    </link-list>
+    {{ content }}
+</div>

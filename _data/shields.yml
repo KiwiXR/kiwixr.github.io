@@ -1,0 +1,44 @@
+# https://simpleicons.org/
+# https://github.com/simple-icons/simple-icons/blob/master/slugs.md
+# https://github.com/inttter/md-badges
+# https://shields.io/docs/logos
+
+default:
+  color: D80082
+  name: nil
+  logo: nil
+
+arxiv:
+  color: B31B1B
+  name: arXiv
+  logo: arxiv
+
+github:
+  color: 181717
+  name: GitHub
+  logo: github
+
+youtube:
+  color: FF0000
+  name: YouTube
+  logo: youtube
+
+bilibili:
+  color: 00A1D6
+  name: Bilibili
+  logo: bilibili
+
+dropbox:
+  color: 0061FF
+  name: Dropbox
+  logo: dropbox
+
+googledrive:
+  color: 4285F4
+  name: Google Drive
+  logo: googledrive
+
+neurips:
+  color:
+  name: NeurIPS
+  logo: file

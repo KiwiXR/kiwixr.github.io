@@ -5,21 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     {% include webpack-scripts.html %}
-    <title>Example Title</title>
-    <script type="text/x-mathjax-config">
-        MathJax = {
+    <title>{{ page.tab_title | default: page.title }}</title>
+    <script type="text/javascript">
+        window.MathJax = {
             tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']],
-                processEscapes: true
+                inlineMath: [['$', '$'], ['\\(', '\\)']],  // Recognize inline math with $...$ or \( ... \)
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],  // Recognize block math with $$...$$ or \[ ... \]
             },
-            options: {
-                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-                renderActions: {
-                    findScript: [10, function (doc) {
-                        // Optional: Add custom handling for scripts if needed
-                    }, '']
-                }
+            svg: {
+                fontCache: 'global',
             }
         };
     </script>
