@@ -29,7 +29,7 @@ const parsedH1Attrs = computed(() => parseAttributes(props.attr_h1));
 </script>
 
 <style scoped>
-.hero {
+.hero-body {
   padding-bottom: 0;
 }
 h1 {

@@ -3,6 +3,7 @@ layout: test
 authors: mingjiali*, binhuixie*, shuangli@, chiharoldliu, xinjingcheng
 tab_title: VBLC
 aff_mode: "simple"
+hide_default_authors: true
 accept:
   name: AAAI23 Oral
   link: https://aaai.org/Conferences/AAAI-23
@@ -24,6 +25,8 @@ Our approach augments neural radiance fields (NeRF) by optimizing an additional 
 
 We show that Nerfies can turn casually captured selfie photos/videos into deformable NeRF models that allow for photorealistic renderings of the subject from arbitrary viewpoints, which we dub "nerfies". We evaluate our method by collecting data using a rig with two mobile phones that take time-synchronized photos, yielding train/validation images of the same pose at different viewpoints. We show that our method faithfully reconstructs non-rigidly deforming scenes and reproduces unseen views with high fidelity.
 
+## BibTeX
+
 ```
 @article{park2021nerfies,
   author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
@@ -33,6 +36,6 @@ We show that Nerfies can turn casually captured selfie photos/videos into deform
 }
 ```
 
-$\tau~inline~latex$
+a $\tau~inline~latex$
 
 $$\textbf{single-line latex}$$
