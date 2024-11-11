@@ -3,7 +3,7 @@ layout: nerfies
 authors: mingjiali*, binhuixie*, shuangli@, chiharoldliu, xinjingcheng
 tab_title: VBLC
 title: "VBLC: Visibility Boosting and Logit-Constraint Learning for Domain Adaptive Semantic Segmentation under Adverse Conditions"
-aff_mode: "simple"
+aff_mode: simple
 #hide_default_authors: true
 accept:
   name: AAAI23 Oral
@@ -15,6 +15,7 @@ links:
   video@bilibili: https://www.bilibili.com/video/av692744964
   poster@dropbox: https://www.dropbox.com/s/pvb2701k2gr9cfb/aaai23poster.pdf?dl=0
 # NavBar
+navbar: true
 home_link: https://kiwixr.github.io
 more_work:
   VBLC: https://kiwixr.github.io/projects/vblc
@@ -26,6 +27,9 @@ more_work:
 ## Abstract
 
 We present the first method capable of photorealistically reconstructing a non-rigidly deforming scene using photos/videos captured casually from mobile phones.
+
+This is <span style="color: red">written in
+red</span>.
 
 Our approach augments neural radiance fields (NeRF) by optimizing an additional continuous volumetric deformation field that warps each observed point into a canonical 5D NeRF. We observe that these NeRF-like deformation fields are prone to local minima, and propose a coarse-to-fine optimization method for coordinate-based models that allows for more robust optimization. By adapting principles from geometry processing and physical simulation to NeRF-like models, we propose an elastic regularization of the deformation field that further improves robustness.
 

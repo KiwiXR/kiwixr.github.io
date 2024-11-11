@@ -6,6 +6,7 @@ hide_default_links: false
 ---
 
 <div id="nerfies">
+    {% if page.navbar %}
     {% assign dropdownItems = '' %}
     {% for pair in page.more_work %}
     {% assign name = pair[0] %}
@@ -20,6 +21,7 @@ hide_default_links: false
             home-link="{{ page.home_link }}"
             :dropdown-items='[{{ dropdownItems }}]'>
     </nav-bar>
+    {% endif %}
 
     <my-title>{{ page.title }}</my-title>
     <author-list>

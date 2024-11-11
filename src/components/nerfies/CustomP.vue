@@ -3,7 +3,7 @@
     <div class="container is-max-desktop">
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
+        <div :class="['column', column_width_p]">
           <div class="content has-text-justified">
             <p v-bind="parsedPAttrs"><slot></slot></p>
           </div>
@@ -22,6 +22,11 @@ const props = defineProps({
   attr_p: {
     type: String,
     default: ""
+  },
+  column_width_p: {
+    type: String,
+    // default: "is-four-fifths"
+    default: "is-full-width"
   }
 });
 

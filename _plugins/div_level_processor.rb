@@ -94,8 +94,10 @@ module Jekyll
           end
         end
         # puts new_node.name
+        puts new_node.inner_html
+        puts node.inner_html
         new_node.inner_html = node.inner_html
-        new_node.content = node.content
+        # new_node.content = node.content
         # puts new_node
         return new_node
       end
@@ -111,6 +113,7 @@ module Jekyll
     def self.process_tag_chains(div, tags, component_whitelist)
       # recursively search for tags
       queue = [div]
+      print(tags)
       until queue.empty?
         node = queue.shift
 
@@ -119,12 +122,12 @@ module Jekyll
         # process
         if node.name == tags.first
           parent_attrs = {"name"=>"custom"}
-          # puts node
+          puts "node: #{node}"
           new_node = process_tag_nesting(node, tags, parent_attrs)
           if new_node
             node.replace(new_node)
           end
-          # puts new_node.parent
+          puts "new node: #{new_node}"
         end
 
         next if node.children.empty?
