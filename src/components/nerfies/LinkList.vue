@@ -21,6 +21,7 @@
 <style scoped>
 .hero-body {
   padding-top: 24px;
-  padding-bottom: 0;
+  padding-bottom: 12px;
+  margin-bottom: 1.5em;
 }
 </style>

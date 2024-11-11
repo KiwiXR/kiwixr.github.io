@@ -4,6 +4,7 @@ require 'nokogiri'
 
 module Jekyll
   class DivLevelHook
+    @special_tags = %w[table ul ol select li tr option]
     def self.process_content(content)
       components_base_dir = File.join(Dir.pwd, 'src', 'components')
       modified_content = content.dup
@@ -25,6 +26,8 @@ module Jekyll
         defined_components = fetch_defined_components(components_dir)
         # Whitelist components shall not be processed
         whitelist_components = fetch_whitelist_components(components_dir)
+        # Some special tags to be handled carefully
+        special_tags = ["table"]
         # print(whitelist_components)
         # defined_components = [["h1"]]
         # print(defined_components)
@@ -34,7 +37,7 @@ module Jekyll
 
       # Convert the document back to HTML
       modified_content = doc.to_html
-      # puts modified_content
+      puts modified_content
       modified_content
     end
 
@@ -114,8 +117,24 @@ module Jekyll
       return res
     end
 
+    def self.process_special_tag(node, tag)
+      if node.name != tag
+        return nil
+      end
+      # puts parent_attrs
+      # process the current node
+      vue_attr = "vue:custom-#{tag}"
+      node.set_attribute("is", vue_attr)
+    end
+
     def self.process_tag_chains(div, tags, component_whitelist)
       # recursively search for tags
+      unless (tags & @special_tags).empty?
+        if tags.size > 1
+          warn("#{tags} has more than one special tags in #{@special_tags}")
+          return
+        end
+      end
       queue = [div]
       # print(tags)
       until queue.empty?
@@ -124,8 +143,10 @@ module Jekyll
         next if component_whitelist.include?(node.name)
 
         # process
-        if node.name == tags.first
-          parent_attrs = {"name"=>"custom"}
+        if tags.size == 1 and node.name == tags.first and @special_tags.include?(tags.first)
+          process_special_tag(node, tags.first)
+        elsif node.name == tags.first
+          parent_attrs = { "name" => "custom" }
           # puts "node: #{node}"
           new_node = process_tag_nesting(node, tags, parent_attrs)
           if new_node
@@ -144,7 +165,7 @@ module Jekyll
 end
 
 # Registering the post-render hook
-Jekyll::Hooks.register([:pages, :posts], :post_render) do |post|
+Jekyll::Hooks.register([:pages, :posts, :documents], :post_render) do |post|
   if %w[.html .md .markdown].include?(post.extname)
     post.output = Jekyll::DivLevelHook.process_content(post.output)
   end
