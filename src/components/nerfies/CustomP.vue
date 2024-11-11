@@ -3,9 +3,9 @@
     <div class="container is-max-desktop">
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
-        <div :class="['column', column_width_p]">
+        <div :class="['column', columnWidthP]">
           <div class="content has-text-justified">
-            <p v-bind="parsedPAttrs"><slot></slot></p>
+            <p v-bind="parsedPAttrsPlain"><slot></slot></p>
           </div>
         </div>
       </div>
@@ -23,20 +23,31 @@ const props = defineProps({
     type: String,
     default: ""
   },
-  column_width_p: {
+  width: {
     type: String,
-    // default: "is-four-fifths"
-    default: "is-full-width"
+    default: "1"
   }
 });
 
+const width_map = {
+  '1': 'is-full-width', '1.0': 'is-full-width', '': 'is-full-width',
+  '4/5': 'is-four-fifths', '0.8': 'is-four-fifths', '.8': 'is-four-fifths'
+}
+
 // Computed properties to get parsed attributes
 const parsedPAttrs = computed(() => parseAttributes(props.attr_p));
+const parsedPAttrsPlain = { ...parsedPAttrs.value };
+let columnWidthP = props.width
+if ('width' in parsedPAttrsPlain) {
+  columnWidthP = parsedPAttrsPlain['width']
+  delete parsedPAttrsPlain['width']
+}
+columnWidthP = width_map[columnWidthP]
 </script>
 
 <style scoped>
 .section {
-  padding-top: 0;
+  padding-top: 12px;
   padding-bottom: 0;
 }
 p {

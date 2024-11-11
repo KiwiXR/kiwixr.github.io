@@ -78,6 +78,10 @@ module Jekyll
       parent_attrs['name'] = "#{parent_attrs['name']}-#{tags.first}"
       current_attr = ""
       node.keys.each do |key|
+        # if key.start_with?('ella_')
+        #   parent_attrs[key] = node[key]
+        #   next
+        # end
         current_attr += "#{key}=\"#{node[key]}\" "
       end
       if current_attr != ''
@@ -94,8 +98,8 @@ module Jekyll
           end
         end
         # puts new_node.name
-        puts new_node.inner_html
-        puts node.inner_html
+        # puts new_node.inner_html
+        # puts node.inner_html
         new_node.inner_html = node.inner_html
         # new_node.content = node.content
         # puts new_node
@@ -113,7 +117,7 @@ module Jekyll
     def self.process_tag_chains(div, tags, component_whitelist)
       # recursively search for tags
       queue = [div]
-      print(tags)
+      # print(tags)
       until queue.empty?
         node = queue.shift
 
@@ -122,12 +126,12 @@ module Jekyll
         # process
         if node.name == tags.first
           parent_attrs = {"name"=>"custom"}
-          puts "node: #{node}"
+          # puts "node: #{node}"
           new_node = process_tag_nesting(node, tags, parent_attrs)
           if new_node
             node.replace(new_node)
           end
-          puts "new node: #{new_node}"
+          # puts "new node: #{new_node}"
         end
 
         next if node.children.empty?

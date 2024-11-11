@@ -2,9 +2,9 @@
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Abstract. -->
-      <div :class="['columns', 'is-centered', columnTextH2]">
-        <div :class="['column', columnWidthH2]">
-          <h2 v-bind="parsedH2AttrsPlain" class="title is-3"><slot></slot></h2>
+      <div :class="['columns', 'is-centered', columnTextH3]">
+        <div :class="['column', columnWidthH3]">
+          <h3 v-bind="parsedH3AttrsPlain" class="title is-4"><slot></slot></h3>
         </div>
       </div>
     </div>
@@ -17,7 +17,7 @@ import { parseAttributes } from "@/utils/parseAttrs";
 
 // Define props for the attributes
 const props = defineProps({
-  attr_h2: {
+  attr_h3: {
     type: String,
     default: ""
   },
@@ -43,33 +43,33 @@ const width_map = {
 }
 
 // Computed properties to get parsed attributes
-const parsedH2Attrs = computed(() => parseAttributes(props.attr_h2));
+const parsedH3Attrs = computed(() => parseAttributes(props.attr_h3));
 
-const parsedH2AttrsPlain = { ...parsedH2Attrs.value };
-let columnTextH2 = props.loc
-if ('loc' in parsedH2AttrsPlain) {
-  columnTextH2 = parsedH2AttrsPlain['loc']
-  delete parsedH2AttrsPlain['loc']
+const parsedH3AttrsPlain = { ...parsedH3Attrs.value };
+let columnTextH3 = props.loc
+if ('loc' in parsedH3AttrsPlain) {
+  columnTextH3 = parsedH3AttrsPlain['loc']
+  delete parsedH3AttrsPlain['loc']
 }
-columnTextH2 = loc_map[columnTextH2]
-// console.log('loc:', columnTextH2)
+columnTextH3 = loc_map[columnTextH3]
+// console.log('loc:', columnTextH3)
 
-let columnWidthH2 = props.width
-if ('width' in parsedH2AttrsPlain) {
-  columnWidthH2 = parsedH2AttrsPlain['width']
-  delete parsedH2AttrsPlain['width']
+let columnWidthH3 = props.width
+if ('width' in parsedH3AttrsPlain) {
+  columnWidthH3 = parsedH3AttrsPlain['width']
+  delete parsedH3AttrsPlain['width']
 }
-columnWidthH2 = width_map[columnWidthH2]
-// console.log(parsedH2AttrsPlain)
+columnWidthH3 = width_map[columnWidthH3]
+// console.log(parsedH3AttrsPlain)
 </script>
 
 <style scoped>
 .section {
-  padding-top: 3rem;
+  padding-top: 12px;
   padding-bottom: 0;
 }
-h2 {
-  margin-bottom: 1.5rem;
+h3 {
+  margin-bottom: 1rem;
 }
 .column {
   padding-bottom: 0;
