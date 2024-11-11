@@ -17,6 +17,7 @@ links:
 navbar: true
 home_link: https://kiwixr.github.io
 more_work:
+  DUSA: https://kiwixr.github.io/projects/dusa
   VBLC: https://kiwixr.github.io/projects/vblc
   SePiCo: https://binhuixie.github.io/sepico-web/
 ---
