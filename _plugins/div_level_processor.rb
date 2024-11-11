@@ -37,7 +37,7 @@ module Jekyll
 
       # Convert the document back to HTML
       modified_content = doc.to_html
-      puts modified_content
+      # puts modified_content
       modified_content
     end
 

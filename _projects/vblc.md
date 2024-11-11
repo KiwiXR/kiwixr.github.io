@@ -42,7 +42,7 @@ logit-constraint learning, which enforces a constraint on logit outputs during t
 To the best of our knowledge, this is a new perspective for tackling such a challenging task. Extensive experiments on
 two normal-to-adverse domain adaptation benchmarks, i.e., Cityscapes $\rightarrow$ ACDC and Cityscapes $\rightarrow$
 FoggyCityscapes + RainCityscapes, verify the effectiveness of VBLC, where it establishes the new state of the art.
-{:loc='c' width='4/5'}
+{:width='4/5'}
 
 ## More Challenging Setting
 

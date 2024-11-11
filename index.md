@@ -1,5 +1,5 @@
 ---
-layout: nerfies
+layout: default
 authors: mingjiali*, binhuixie*, shuangli@, chiharoldliu, xinjingcheng
 tab_title: VBLC
 title: "VBLC: Visibility Boosting and Logit-Constraint Learning for Domain Adaptive Semantic Segmentation under Adverse Conditions"
@@ -25,7 +25,8 @@ more_work:
 ---
 
 ## Abstract
-{:loc='c' width='4/5'}
+
+[//]: # ({:loc='c' width='4/5'})
 
 We present the first method capable of photorealistically reconstructing a non-rigidly deforming scene using photos/videos captured casually from mobile phones.
 {:width='4/5'}
