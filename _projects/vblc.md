@@ -21,6 +21,7 @@ more_work:
 
 | ![motivation](/assets/images/vblc/night.gif "Night") | ![motivation](/assets/images/vblc/rain.gif "Rain") |
 | ![motivation](/assets/images/vblc/fog.gif "Fog") | ![motivation](/assets/images/vblc/snow.gif "Snow") |
+{:width='4/5'}
 
 ## Abstract
 {:loc='c' width='4/5'}
@@ -48,13 +49,13 @@ And different adverse conditions are handled separately.
 
 In VBLC, we manage to achieve adaptation **without** the reliance on paired images, and take a step further to handle **multiple** adverse weather conditions with a **single** trained model.
 
-![motivation](/assets/images/vblc/motivation.png){:width="100%"}
+![motivation](/assets/images/vblc/motivation.png)
 
 ## Visual Results
 
 VBLC yields high-quality segmentation results even under a mixure of adverse weather conditions. The effectiveness of our method can be attribute to both Visibility Boost Module (VBM) and Logit-Constraint Learning (LCL).
 
-![seg_map](/assets/images/vblc/seg_map.png){:width="100%"}
+![seg_map](/assets/images/vblc/seg_map.png)
 
 ## BibTeX
 {:loc='l'}

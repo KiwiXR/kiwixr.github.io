@@ -14,6 +14,7 @@
 <script setup>
 import { defineProps, computed } from 'vue';
 import { parseAttributes } from "@/utils/parseAttrs";
+import { loc_map, width_map } from "@/utils/mappings";
 
 // Define props for the attributes
 const props = defineProps({
@@ -30,17 +31,6 @@ const props = defineProps({
     default: "1"
   }
 });
-
-const loc_map = {
-  'c': 'has-text-centered', 'center': 'has-text-centered', 'centered': 'has-text-centered', 'middle': 'has-text-centered', 'm': 'has-text-centered',
-  'l': 'has-text-left', 'left': 'has-text-left',
-  'r': 'has-text-right', 'right': 'has-text-right',
-}
-
-const width_map = {
-  '1': 'is-full-width', '1.0': 'is-full-width', '': 'is-full-width',
-  '4/5': 'is-four-fifths', '0.8': 'is-four-fifths', '.8': 'is-four-fifths'
-}
 
 // Computed properties to get parsed attributes
 const parsedH2Attrs = computed(() => parseAttributes(props.attr_h2));

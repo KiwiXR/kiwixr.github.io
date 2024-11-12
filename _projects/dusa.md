@@ -8,8 +8,9 @@ links:
     neurips 24@accept: https://neurips.cc/virtual/2024/poster/94444
     paper@paper: https://openreview.net/forum?id=c7m1HahBNf
     code@github: https://github.com/BIT-DA/DUSA
-    video@video: https://www.youtube.com/watch?v=o0voyaQ3FzM
-    poster@poster: https://neurips.cc/virtual/2024/poster/94444
+    video@video: 
+    slides@slides: 
+    poster@poster: https://neurips.cc/media/PosterPDFs/NeurIPS%202024/94444.png
 # NavBar
 navbar: true
 home_link: https://kiwixr.github.io
@@ -17,6 +18,9 @@ more_work:
   VBLC: https://kiwixr.github.io/projects/vblc
   SePiCo: https://binhuixie.github.io/sepico-web/
 ---
+
+![theory](/assets/images/dusa/dusa.png)
+{:width='4/5'}
 
 ## Abstract
 {:loc='c' width='4/5'}
