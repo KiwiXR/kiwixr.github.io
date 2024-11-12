@@ -100,7 +100,9 @@ DEPENDENCIES
   tzinfo (>= 1, < 3)
   tzinfo-data
   wdm (~> 0.1)
-  webrick (~> 1.8)
+
+RUBY VERSION
+   ruby 3.3.5p100
 
 BUNDLED WITH
    2.5.21
