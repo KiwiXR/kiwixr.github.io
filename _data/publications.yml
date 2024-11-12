@@ -1,0 +1,34 @@
+main:
+
+  - title: "Exploring Structured Semantic Priors Underlying Diffusion Score for Test-time Adaptation"
+    authors: <strong>Mingjia Li</strong>, Shuang Li, Tongrui Su, Longhui Yuan, Jian Liang, Wei Li
+    conference_short: NeurIPS
+    conference: Annual Conference on Neural Information Processing Systems <strong>(NeurIPS)</strong>, 2024
+    paper: https://openreview.net/forum?id=c7m1HahBNf
+    code: https://github.com/BIT-DA/DUSA
+    page: https://kiwixr.github.io/projects/dusa
+    bibtex: ./assets/raw/dusa.txt
+    notes:
+    image: ./assets/images/dusa/dusa.png
+
+  - title: "VBLC: Visibility Boosting and Logit-Constraint Learning for Domain Adaptive Semantic Segmentation under Adverse Conditions"
+    authors: <strong>Mingjia Li</strong>*, Binhui Xie*, Shuang Li, Chi Harold Liu, Xinjing Cheng
+    conference_short: AAAI
+    conference: AAAI Conference on Artificial Intelligence <strong>(AAAI)</strong>, 2023
+    paper: https://arxiv.org/abs/2211.12256
+    code: https://github.com/BIT-DA/VBLC
+    page: https://kiwixr.github.io/projects/vblc
+    bibtex: ./assets/raw/vblc.txt
+    notes: Oral Presentation
+    image: ./assets/images/vblc/vblc.png
+
+  - title: "SePiCo: Semantic-Guided Pixel Contrast for Domain Adaptive Semantic Segmentation"
+    authors: Binhui Xie, Shuang Li, <strong>Mingjia Li</strong>, Chi Harold Liu, Gao Huang, Guoren Wang
+    conference_short: TPAMI
+    conference: IEEE Transactions on Pattern Analysis and Machine Intelligence <strong>(TPAMI)</strong>, 2023
+    paper: https://arxiv.org/abs/2204.08808
+    code: https://github.com/BIT-DA/SePiCo
+    page: https://binhuixie.github.io/sepico-web
+    bibtex: ./assets/raw/sepico.txt
+    notes: ESI Highly Cited Paper
+    image: ./assets/images/sepico/sepico.png

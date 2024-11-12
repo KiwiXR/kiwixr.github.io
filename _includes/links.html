@@ -7,7 +7,7 @@
 <!--  <span>Paper</span>-->
 <!--</a>-->
 <!--</span>-->
-<a href="{{ include.accept.link }}"><img src="https://img.shields.io/badge/-{{ include.accept.name }}-%23F68D2E?style=for-the-badge" alt="source" style="max-width: 100%;"></a>
+<!--<a href="{{ include.accept.link }}"><img src="https://img.shields.io/badge/-{{ include.accept.name }}-%23{{ cfg.accept }}?style=for-the-badge&logo={{ cfg.logo }}&labelColor=555" alt="source" style="max-width: 100%;"></a>-->
 {% for link in include.links %}
 &nbsp;&nbsp;&nbsp;
 {% assign link_meta = link[0] | split: '@' %}

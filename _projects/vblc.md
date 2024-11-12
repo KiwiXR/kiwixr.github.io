@@ -1,13 +1,11 @@
 ---
 layout: nerfies
-authors: mingjiali*, binhuixie*, shuangli@, chiharoldliu, xinjingcheng
+authors: MingjiaLi*, BinhuiXie*, ShuangLi@, ChiHaroldLiu, XinjingCheng
 title: "VBLC: Visibility Boosting and Logit-Constraint Learning for Domain Adaptive Semantic Segmentation under Adverse Conditions"
 tab_title: VBLC
 aff_mode: "simple"
-accept:
-    name: AAAI23 Oral
-    link: https://aaai.org/Conferences/AAAI-23
 links:
+    AAAI 23 Oral@accept: https://aaai.org/Conferences/AAAI-23
     paper@arxiv: https://arxiv.org/abs/2211.12256
     code@github: https://github.com/BIT-DA/VBLC
     video@youtube: https://www.youtube.com/watch?v=o0voyaQ3FzM
@@ -18,7 +16,6 @@ navbar: true
 home_link: https://kiwixr.github.io
 more_work:
   DUSA: https://kiwixr.github.io/projects/dusa
-  VBLC: https://kiwixr.github.io/projects/vblc
   SePiCo: https://binhuixie.github.io/sepico-web/
 ---
 
