@@ -17,3 +17,24 @@ more_work:
   VBLC: https://kiwixr.github.io/projects/vblc
   SePiCo: https://binhuixie.github.io/sepico-web/
 ---
+
+## Abstract
+{:loc='c' width='4/5'}
+
+Capitalizing on the complementary advantages of generative and discriminative models has always been a compelling vision in machine learning, backed by a growing body of research. This work discloses the hidden semantic structure within score-based generative models, unveiling their potential as effective discriminative priors. Inspired by our theoretical findings, we propose DUSA to exploit the structured semantic priors underlying diffusion score to facilitate the test-time adaptation of image classifiers or dense predictors. Notably, DUSA extracts knowledge from a single timestep of denoising diffusion, lifting the curse of Monte Carlo-based likelihood estimation over timesteps. We demonstrate the efficacy of our DUSA in adapting a wide variety of competitive pre-trained discriminative models on diverse test-time scenarios. Additionally, a thorough ablation study is conducted to dissect the pivotal elements in DUSA.
+{:width='4/5'}
+
+## TODO
+
+## BibTeX
+{:loc='l'}
+
+```text
+@inproceedings{li2024exploring,
+    title={Exploring Structured Semantic Priors Underlying Diffusion Score for Test-time Adaptation},
+    author={Mingjia Li and Shuang Li and Tongrui Su and Longhui Yuan and Jian Liang and Wei Li},
+    booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+    year={2024},
+    url={https://openreview.net/forum?id=c7m1HahBNf}
+}
+```

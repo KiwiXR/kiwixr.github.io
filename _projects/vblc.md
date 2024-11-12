@@ -60,10 +60,13 @@ VBLC yields high-quality segmentation results even under a mixure of adverse wea
 {:loc='l'}
 
 ```
-@article{li2022vblc,
-  title={VBLC: Visibility Boosting and Logit-Constraint Learning for Domain Adaptive Semantic Segmentation under Adverse Conditions},
+@inproceedings{li2023vblc,
+  title={VBLC: visibility boosting and logit-constraint learning for domain adaptive semantic segmentation under adverse conditions},
   author={Li, Mingjia and Xie, Binhui and Li, Shuang and Liu, Chi Harold and Cheng, Xinjing},
-  journal={arXiv preprint arXiv:2211.12256},
-  year={2022}
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={37},
+  number={7},
+  pages={8605--8613},
+  year={2023}
 }
 ```
