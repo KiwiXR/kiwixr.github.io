@@ -9,7 +9,7 @@ links:
     paper@paper: https://openreview.net/forum?id=c7m1HahBNf
     code@github: https://github.com/BIT-DA/DUSA
     video@video: 
-    slides@slides: 
+    slides@slides: https://neurips.cc/media/neurips-2024/Slides/94444.pdf
     poster@poster: https://neurips.cc/media/PosterPDFs/NeurIPS%202024/94444.png
 # NavBar
 navbar: true
@@ -29,6 +29,10 @@ Capitalizing on the complementary advantages of generative and discriminative mo
 {:width='4/5'}
 
 ## TODO
+
+a $a$
+
+$$b$$
 
 ## BibTeX
 {:loc='l'}
