@@ -62,7 +62,7 @@ font: "Serif" # or "Sans Serif"
 
 # Google Analytics ID
 # Please remove this if you don't use Google Analytics
-#google_analytics:
+google_analytics: G-HTDR85MQ5V
 
 # extra data inclusion
 collections:
