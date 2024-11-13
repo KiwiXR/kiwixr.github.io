@@ -3,7 +3,7 @@ export function loadApps() {
     const context = require.context('@/components', true, /main\.js$/); // Match all main.js files in app directories
     const appNames = [];
 
-    console.log(context.keys())
+    // console.log(context.keys())
 
     // Iterate over the keys to gather app names
     context.keys().forEach(path => {
@@ -13,7 +13,7 @@ export function loadApps() {
     });
 
     // Log all app names that were found
-    console.log("Found app names:", appNames);
+    // console.log("Found app names:", appNames);
 
     return appNames; // Return the array of app names
 }

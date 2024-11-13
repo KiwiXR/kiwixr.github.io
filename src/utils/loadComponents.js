@@ -5,7 +5,7 @@ export function loadComponents(appName) {
     // Ensure the path is absolute to the components folder
     const context = require.context('@/components', true, /\.vue$/); // Recursively find .vue files
 
-    console.log(`Loading components for app: ${appName}`);
+    // console.log(`Loading components for app: ${appName}`);
 
     // Iterate over the keys to find specific app components
     context.keys().forEach(key => {
@@ -14,7 +14,7 @@ export function loadComponents(appName) {
             const componentName = key.split('/').pop().replace('.vue', ''); // Get component name
             components[componentName] = context(key).default; // Load and store the component
 
-            console.log(`Loaded component: ${componentName}`);
+            // console.log(`Loaded component: ${componentName}`);
         }
     });
 
