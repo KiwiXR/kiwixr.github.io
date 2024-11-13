@@ -10,7 +10,8 @@ links:
     code@github: https://github.com/BIT-DA/DUSA
     video@video: 
     slides@slides: https://neurips.cc/media/neurips-2024/Slides/94444.pdf
-    poster@poster: https://neurips.cc/media/PosterPDFs/NeurIPS%202024/94444.png
+    poster@poster: /assets/files/335_dusa_poster.pdf
+#    poster@poster: https://neurips.cc/media/PosterPDFs/NeurIPS%202024/94444.png
 # NavBar
 navbar: true
 home_link: https://kiwixr.github.io
@@ -19,7 +20,7 @@ more_work:
   SePiCo: https://binhuixie.github.io/sepico-web/
 ---
 
-![theory](/assets/images/dusa/dusa.png)
+![theory](/assets/images/dusa/core.png)
 {:width='4/5'}
 
 ## Abstract
@@ -28,11 +29,50 @@ more_work:
 Capitalizing on the complementary advantages of generative and discriminative models has always been a compelling vision in machine learning, backed by a growing body of research. This work discloses the hidden semantic structure within score-based generative models, unveiling their potential as effective discriminative priors. Inspired by our theoretical findings, we propose DUSA to exploit the structured semantic priors underlying diffusion score to facilitate the test-time adaptation of image classifiers or dense predictors. Notably, DUSA extracts knowledge from a single timestep of denoising diffusion, lifting the curse of Monte Carlo-based likelihood estimation over timesteps. We demonstrate the efficacy of our DUSA in adapting a wide variety of competitive pre-trained discriminative models on diverse test-time scenarios. Additionally, a thorough ablation study is conducted to dissect the pivotal elements in DUSA.
 {:width='4/5'}
 
-## TODO
+## Method Overview
 
-a $a$
+![framework](/assets/images/dusa/framework.svg)
 
-$$b$$
+## Theoretical Findings
+
+### Semantic Structure of Score Functions
+
+We discover a semantic structure between score functions (i.e., $\nabla_x\log p(x)$) under mild assumptions about the densities:
+
+$$\nabla_\mathbf{x}\log p(\mathbf{x}) = \sum_y p(y\mid\mathbf{x}) \nabla_\mathbf{x}\log p(\mathbf{x}\mid y)$$
+
+This formula unveils that the unconditional score function $\nabla_\mathbf{x}\log p(\mathbf{x})$ can be decomposed as 
+a weighted sum of conditional score functions $\nabla_\mathbf{x}\log p(\mathbf{x}\mid y)$, where the weights are given by the posterior probabilities $p(y\mid\mathbf{x})$.
+
+### Implicit Priors in Diffusion Models
+
+With Tweedie's Formula we have $\nabla_{\mathbf{x}_t}\log p(\mathbf{x}_t)=-\mathbf{\epsilon}/\sqrt{1-\bar{\alpha}_t}$, and a semantic structure emerges within diffusion models:
+
+$$\mathbf{\epsilon} = \sum_y p(y\mid\mathbf{x}_t)\mathbf{\epsilon}_\phi(\mathbf{x}_t,t,c_y)$$
+
+We **highlight** that $p(y\mid\mathbf{x}_t)$ are not directly modeled, and can thus be seen as the **_implicit priors_** hidden in diffusion models.
+
+## Quantitative Results
+
+### Fully Test-time Adaptation of ImageNet Classifiers
+
+![fully](/assets/images/dusa/table1.jpg)
+
+[//]: # (### Continual Test-time Adaptation of ImageNet Classifiers)
+
+[//]: # ()
+[//]: # (![continual]&#40;/assets/images/dusa/table2.jpg&#41;)
+
+[//]: # (### Fully Test-time Adaptation of ACDC Segmentors)
+
+[//]: # ()
+[//]: # (![fully-seg]&#40;/assets/images/dusa/table3.jpg&#41;)
+
+## Qualitative Results
+
+### Fully Test-time Adaptation of ACDC Segmentors
+
+![seg](/assets/images/dusa/figure2.svg){:width="100%"}
 
 ## BibTeX
 {:loc='l'}

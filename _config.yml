@@ -18,8 +18,11 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-env: dev
+#env: dev
 title: Mingjia Li
+position: Master's Student
+affiliation: Beijing Institute of Technology
+aff_simple: BIT
 email: mingjiali@bit.edu.cn
 description: >- # this means to ignore newlines until "baseurl:"
   Write an awesome description for your new site here. You can edit this
@@ -59,7 +62,7 @@ font: "Serif" # or "Sans Serif"
 
 # Google Analytics ID
 # Please remove this if you don't use Google Analytics
-google_analytics:
+#google_analytics:
 
 # extra data inclusion
 collections:
@@ -70,6 +73,7 @@ collections:
 markdown: kramdown
 kramdown:
   math_engine: mathjax
+  toc_levels: "2,3"
 
 # Build settings
 #theme: minima
