@@ -14,15 +14,19 @@ module.exports = {
     },
     optimization: {
         splitChunks: {
+            chunks: 'all', // Split both dynamic and initial chunks
             cacheGroups: {
                 vendor: {
-                    chunks: 'initial',
-                    test: path.resolve(__dirname, 'node_modules'),
+                    test: /[\\/]node_modules[\\/]/, // Split libraries from node_modules
                     name: 'vendor',
-                    enforce: true
-                }
-            }
-        }
+                    chunks: 'all',
+                },
+                common: {
+                    name: 'common',
+                    minChunks: 2, // Split out common code that’s shared between files
+                },
+            },
+        },
     },
     mode: 'development',
     module: {
