@@ -3,14 +3,16 @@
 require 'nokogiri'
 
 module Jekyll
-  class DivLevelHook
+  class DivLevelTagCustomize
     @special_tags = %w[table ul ol select li tr option]
     def self.process_content(content)
       components_base_dir = File.join(Dir.pwd, 'src', 'components')
       modified_content = content.dup
 
+      # puts content
+
       # Parse the content with Nokogiri
-      doc = Nokogiri::HTML::DocumentFragment.parse(modified_content)
+      doc = Nokogiri::HTML(modified_content)
       # puts 'doc', doc.document
       # puts(doc)
       # Loop through all <div> elements with an id
@@ -167,6 +169,6 @@ end
 # Registering the post-render hook
 Jekyll::Hooks.register([:pages, :posts, :documents], :post_render) do |post|
   if %w[.html .md .markdown].include?(post.extname)
-    post.output = Jekyll::DivLevelHook.process_content(post.output)
+    post.output = Jekyll::DivLevelTagCustomize.process_content(post.output)
   end
 end

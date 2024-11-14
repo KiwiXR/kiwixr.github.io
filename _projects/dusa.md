@@ -31,7 +31,11 @@ Capitalizing on the complementary advantages of generative and discriminative mo
 
 ## Method Overview
 
-![framework](/assets/images/dusa/framework.svg)
++ The task model drains knowledge from the structured semantic priors underlying the diffusion model
++ Both models are jointly updated with our DUSA objective
++ A Candidate Selection Module (CSM) is proposed to improve adaptation efficiency
+
+![framework](/assets/images/dusa/framework.png)
 
 ## Theoretical Findings
 
@@ -50,7 +54,13 @@ With Tweedie's Formula we have $\nabla_{\mathbf{x}_t}\log p(\mathbf{x}_t)=-\math
 
 $$\mathbf{\epsilon} = \sum_y p(y\mid\mathbf{x}_t)\mathbf{\epsilon}_\phi(\mathbf{x}_t,t,c_y)$$
 
-We **highlight** that $p(y\mid\mathbf{x}_t)$ are not directly modeled, and can thus be seen as the **_implicit priors_** hidden in diffusion models.
+We **highlight** that $p(y\mid\mathbf{x}_t)$ are not directly modeled, and can thus be seen as the **_implicit priors_**{: style='color: #9400D3'} hidden in diffusion models.
+
+### Test-time Adaptation with Structured Semantic Priors
+
+Given a task model $f_\theta$ and a diffusion model $\mathbf{\epsilon}_\phi$, we can embed task model prediction $p_\theta(y\mid\mathbf{x}_0)$ to extract knowledge from the implicit priors $p(y\mid\mathbf{x}_t)$:
+
+$$\mathcal{L}_{DUSA}(\theta,\phi)=\mathbb{E}_{\mathbf{\epsilon}}\Big[\big\Vert \mathbf{\epsilon} - \sum_yp_\theta(y\mid\mathbf{x}_0)\mathbf{\epsilon}_\phi(\mathbf{x}_t,t,c_y) \big\Vert_2^2\Big]$$
 
 ## Quantitative Results
 
@@ -72,7 +82,7 @@ We **highlight** that $p(y\mid\mathbf{x}_t)$ are not directly modeled, and can t
 
 ### Fully Test-time Adaptation of ACDC Segmentors
 
-![seg](/assets/images/dusa/figure2.svg){:width="100%"}
+![seg](/assets/images/dusa/figure2.png){:width="100%"}
 
 ## BibTeX
 {:loc='l'}

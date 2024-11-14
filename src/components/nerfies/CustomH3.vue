@@ -1,10 +1,9 @@
 <template>
   <section class="section">
     <div class="container is-max-desktop">
-      <!-- Abstract. -->
-      <div :class="['columns', 'is-centered', columnTextH3]">
-        <div :class="['column', columnWidthH3]">
-          <h3 v-bind="parsedH3AttrsPlain" class="title is-4"><slot></slot></h3>
+      <div :class="['columns', 'is-centered', columnTextLoc]">
+        <div :class="['column', columnWidth]">
+          <h3 v-bind="parsedAttrsPlain" class="title is-4"><slot></slot></h3>
         </div>
       </div>
     </div>
@@ -33,35 +32,35 @@ const props = defineProps({
 });
 
 // Computed properties to get parsed attributes
-const parsedH3Attrs = computed(() => parseAttributes(props.attr_h3));
+const parsedAttrs = computed(() => parseAttributes(props.attr_h3));
 
-const parsedH3AttrsPlain = { ...parsedH3Attrs.value };
-let columnTextH3 = props.loc
-if ('loc' in parsedH3AttrsPlain) {
-  columnTextH3 = parsedH3AttrsPlain['loc']
-  delete parsedH3AttrsPlain['loc']
+const parsedAttrsPlain = { ...parsedAttrs.value };
+let columnTextLoc = props.loc
+if ('loc' in parsedAttrsPlain) {
+  columnTextLoc = parsedAttrsPlain['loc']
+  delete parsedAttrsPlain['loc']
 }
-columnTextH3 = loc_map[columnTextH3]
-// console.log('loc:', columnTextH3)
+columnTextLoc = loc_map[columnTextLoc]
+// console.log('loc:', columnTextLoc)
 
-let columnWidthH3 = props.width
-if ('width' in parsedH3AttrsPlain) {
-  columnWidthH3 = parsedH3AttrsPlain['width']
-  delete parsedH3AttrsPlain['width']
+let columnWidth = props.width
+if ('width' in parsedAttrsPlain) {
+  columnWidth = parsedAttrsPlain['width']
+  delete parsedAttrsPlain['width']
 }
-columnWidthH3 = width_map[columnWidthH3]
-// console.log(parsedH3AttrsPlain)
+columnWidth = width_map[columnWidth]
+// console.log(parsedAttrsPlain)
 </script>
 
 <style scoped>
 .section {
   padding-top: 12px;
-  padding-bottom: 0;
+  padding-bottom: 1rem;
 }
 h3 {
-  margin-bottom: 1rem;
+  //margin-bottom: 1rem;
 }
 .column {
-  padding-bottom: 0;
+  //padding-bottom: 0;
 }
 </style>

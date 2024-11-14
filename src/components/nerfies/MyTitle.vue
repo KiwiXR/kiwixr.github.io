@@ -25,21 +25,17 @@ const props = defineProps({
 });
 
 // Computed properties to get parsed attributes
-const parsedH1Attrs = computed(() => parseAttributes(props.attr_h1));
+const parsedAttrs = computed(() => parseAttributes(props.attr_h1));
 </script>
 
 <style scoped>
 .hero-body {
-  padding-bottom: 0;
+  padding-bottom: 1.5rem;
 }
 h1 {
-  margin-bottom: 1.5rem;
+  //margin-bottom: 1.5rem;
 }
 .column {
-  padding-bottom: 0;
-}
-.e-h1-warn {
-  //background: violet;
-  color: mediumvioletred;
+  //padding-bottom: 0;
 }
 </style>

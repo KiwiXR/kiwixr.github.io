@@ -18,9 +18,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     {% include webpack-scripts.html %}
     <title>{{ page.tab_title | default: page.title }}</title>
-<!--    <link rel="icon" href="/favicon.png?v=2" type="image/png" />-->
     <script type="text/javascript">
         window.MathJax = {
+            startup: {
+                ready() {
+                    var CHTMLmath = MathJax._.output.chtml.Wrappers.math.CHTMLmath;
+                    CHTMLmath.styles['mjx-container[jax="CHTML"][display="true"]'].margin = '0.5em';
+                    MathJax.startup.defaultReady();
+                }
+            },
             tex: {
                 inlineMath: [['$', '$'], ['\\(', '\\)']],  // Recognize inline math with $...$ or \( ... \)
                 displayMath: [['$$', '$$'], ['\\[', '\\]']],  // Recognize block math with $$...$$ or \[ ... \]

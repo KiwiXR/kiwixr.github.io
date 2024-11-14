@@ -1,11 +1,10 @@
 <template>
   <section class="section">
     <div class="container is-max-desktop">
-      <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
-        <div :class="['column', columnWidthP]">
-          <div :class="['content', columnTextP]">
-            <p v-bind="parsedPAttrsPlain"><slot></slot></p>
+        <div :class="['column', columnWidth]">
+          <div :class="['content', columnTextLoc]">
+            <p v-bind="parsedAttrsPlain"><slot></slot></p>
           </div>
         </div>
       </div>
@@ -35,33 +34,33 @@ const props = defineProps({
 });
 
 // Computed properties to get parsed attributes
-const parsedPAttrs = computed(() => parseAttributes(props.attr_p));
-const parsedPAttrsPlain = { ...parsedPAttrs.value };
-let columnTextP = props.loc
-if ('loc' in parsedPAttrsPlain) {
-  columnTextP = parsedPAttrsPlain['loc']
-  delete parsedPAttrsPlain['loc']
+const parsedAttrs = computed(() => parseAttributes(props.attr_p));
+const parsedAttrsPlain = { ...parsedAttrs.value };
+let columnTextLoc = props.loc
+if ('loc' in parsedAttrsPlain) {
+  columnTextLoc = parsedAttrsPlain['loc']
+  delete parsedAttrsPlain['loc']
 }
-columnTextP = loc_map[columnTextP]
-// console.log('loc:', columnTextH2)
+columnTextLoc = loc_map[columnTextLoc]
+// console.log('loc:', columnTextLoc)
 
-let columnWidthP = props.width
-if ('width' in parsedPAttrsPlain) {
-  columnWidthP = parsedPAttrsPlain['width']
-  delete parsedPAttrsPlain['width']
+let columnWidth = props.width
+if ('width' in parsedAttrsPlain) {
+  columnWidth = parsedAttrsPlain['width']
+  delete parsedAttrsPlain['width']
 }
-columnWidthP = width_map[columnWidthP]
+columnWidth = width_map[columnWidth]
 </script>
 
 <style scoped>
 .section {
   padding-top: 12px;
-  padding-bottom: 0;
+  padding-bottom: 12px;
 }
 p {
-  margin-bottom: 1em;
+  //margin-bottom: 12px;
 }
 .column {
-  padding-bottom: 0;
+  //padding-bottom: 0;
 }
 </style>

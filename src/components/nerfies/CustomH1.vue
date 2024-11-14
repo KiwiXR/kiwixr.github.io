@@ -25,7 +25,7 @@ const props = defineProps({
 });
 
 // Computed properties to get parsed attributes
-const parsedH1Attrs = computed(() => parseAttributes(props.attr_h1));
+const parsedAttrs = computed(() => parseAttributes(props.attr_h1));
 </script>
 
 <style scoped>

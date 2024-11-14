@@ -60,7 +60,7 @@ VBLC yields high-quality segmentation results even under a mixure of adverse wea
 ## BibTeX
 {:loc='l'}
 
-```
+```text
 @inproceedings{li2023vblc,
   title={VBLC: visibility boosting and logit-constraint learning for domain adaptive semantic segmentation under adverse conditions},
   author={Li, Mingjia and Xie, Binhui and Li, Shuang and Liu, Chi Harold and Cheng, Xinjing},

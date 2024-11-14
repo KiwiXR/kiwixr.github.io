@@ -3,7 +3,9 @@
     <div class="container is-max-desktop">
       <div :class="['columns', 'is-centered', columnTextLoc]">
         <div :class="['column', columnWidth]">
-          <h2 v-bind="parsedAttrsPlain" class="title is-3"><slot></slot></h2>
+          <ol v-bind="parsedAttrsPlain">
+            <slot></slot>
+          </ol>
         </div>
       </div>
     </div>
@@ -17,13 +19,13 @@ import { loc_map, width_map } from "@/utils/mappings";
 
 // Define props for the attributes
 const props = defineProps({
-  attr_h2: {
+  attr_ol: {
     type: String,
     default: ""
   },
-  loc: {
+  text_loc: {
     type: String,
-    default: "c"
+    default: "l"
   },
   width: {
     type: String,
@@ -32,16 +34,15 @@ const props = defineProps({
 });
 
 // Computed properties to get parsed attributes
-const parsedAttrs = computed(() => parseAttributes(props.attr_h2));
+const parsedAttrs = computed(() => parseAttributes(props.attr_ol));
 
 const parsedAttrsPlain = { ...parsedAttrs.value };
-let columnTextLoc = props.loc
+let columnTextLoc = props.text_loc
 if ('loc' in parsedAttrsPlain) {
   columnTextLoc = parsedAttrsPlain['loc']
   delete parsedAttrsPlain['loc']
 }
 columnTextLoc = loc_map[columnTextLoc]
-// console.log('loc:', columnTextLoc)
 
 let columnWidth = props.width
 if ('width' in parsedAttrsPlain) {
@@ -49,18 +50,16 @@ if ('width' in parsedAttrsPlain) {
   delete parsedAttrsPlain['width']
 }
 columnWidth = width_map[columnWidth]
-// console.log(parsedAttrsPlain)
 </script>
 
 <style scoped>
 .section {
-  padding-top: 3rem;
-  padding-bottom: 1.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
 }
-h2 {
-  //margin-bottom: 1.5rem;
-}
-.column {
-  //padding-bottom: 0;
+ol {
+  list-style-type: lower-alpha;
+  margin-left: 0;
+  padding-left: 20px;
 }
 </style>
