@@ -34,7 +34,7 @@
 </template>
 
 <script setup>
-import { defineProps, onMounted } from 'vue';
+import { onMounted } from 'vue';
 
 // Define props
 const props = defineProps({

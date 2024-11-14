@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import { defineProps, computed } from 'vue';
+import { computed } from 'vue';
 import { parseAttributes } from "@/utils/parseAttrs";
 import { loc_map, width_map } from "@/utils/mappings";
 

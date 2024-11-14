@@ -20,14 +20,16 @@ nerfies
 + [x] Headers
   + [x] `CustomH2` `<h2></h2>`
   + [x] `CustomH3` `<h3></h3>`
-+ [ ] Blockquotes
++ [x] Blockquotes: `CustomBlockquote` `<blockquote></blockquote>`
 + [x] Code Blocks: `CustomPreCode` `<pre><code></code></pre>`
-+ [ ] Horizontal Rules
-+ [ ] Lists
-+ [ ] Definition Lists
++ [x] Horizontal Rules: `CustomHr` `<hr>`
++ [x] Lists
+  + [x] Unordered List: `CustomUl` `<ul></ul>`
+  + [x] Ordered List: `CustomOl` `<ol></ol>`
++ [x] Definition Lists: `CustomDl` `<dl></dl>`
 + [x] Tables: `CustomTable` `<table>`
-+ [ ] Links: **Not Planned** (already wrapped by `<p></p>`)
-+ [ ] Images: **Not Planned** (already wrapped by `<p></p>`)
++ [x] Links: **Not Planned** (already wrapped by `<p></p>`)
++ [x] Images: **Not Planned** (already wrapped by `<p></p>`)
 + [ ] Extras
   + [x] AuthorList
   + [x] LinkList

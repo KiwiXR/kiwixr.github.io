@@ -19,3 +19,8 @@ I am a Master's student at Beijing Institute of Technology (BIT) with focus on s
 - **[Nov 2022]** Our _VBLC_ on adverse-weather semantic segmentation is accepted to AAAI 2023 as **Oral Presentation**{: style="color: red"}.
 
 {% include_relative _includes/publications.md %}
+
+## About This Homepage & Project Pages
+
++ This is a Jekyll + Vue3 solution, source code can be found [here](https://github.com/KiwiXR/kiwixr.github.io).
++ Project page [syntax](https://kramdown.gettalong.org/quickref.html) supports for Kramdown can be found [here](/projects/example)

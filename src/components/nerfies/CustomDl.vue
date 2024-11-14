@@ -3,9 +3,9 @@
     <div class="container is-max-desktop">
       <div :class="['columns', 'is-centered', columnTextLoc]">
         <div :class="['column', columnWidth]">
-          <ul v-bind="parsedAttrsPlain">
+          <dl v-bind="parsedAttrsPlain">
             <slot></slot>
-          </ul>
+          </dl>
         </div>
       </div>
     </div>
@@ -19,7 +19,7 @@ import { loc_map, width_map } from "@/utils/mappings";
 
 // Define props for the attributes
 const props = defineProps({
-  attr_ul: {
+  attr_dl: {
     type: String,
     default: ""
   },
@@ -34,7 +34,7 @@ const props = defineProps({
 });
 
 // Computed properties to get parsed attributes
-const parsedAttrs = computed(() => parseAttributes(props.attr_ul));
+const parsedAttrs = computed(() => parseAttributes(props.attr_dl));
 
 const parsedAttrsPlain = { ...parsedAttrs.value };
 let columnTextLoc = props.text_loc
@@ -57,9 +57,20 @@ columnWidth = width_map[columnWidth]
   padding-top: 0;
   padding-bottom: 0;
 }
-ul {
-  list-style: disc;
+dl {
   margin-left: 0;
   padding-left: 20px;
+  display: grid;
+  grid-template-columns: max-content auto;
+  gap: 16px;
+}
+:slotted(dt) {
+  font-weight: bold;
+  grid-column-start: 1;
+}
+:slotted(dd) {
+  margin: 0;
+  padding: 0 0 0.5em 0;
+  grid-column-start: 2;
 }
 </style>

@@ -4,7 +4,7 @@ require 'nokogiri'
 
 module Jekyll
   class DivLevelTagCustomize
-    @special_tags = %w[table ul ol select li tr option]
+    @special_tags = %w[table ul ol select li tr option dl dt dd]
     def self.process_content(content)
       components_base_dir = File.join(Dir.pwd, 'src', 'components')
       modified_content = content.dup
@@ -107,7 +107,6 @@ module Jekyll
         # puts node.inner_html
         new_node.inner_html = node.inner_html
         # new_node.content = node.content
-        # puts new_node
         return new_node
       end
       res = nil
@@ -170,5 +169,6 @@ end
 Jekyll::Hooks.register([:pages, :posts, :documents], :post_render) do |post|
   if %w[.html .md .markdown].include?(post.extname)
     post.output = Jekyll::DivLevelTagCustomize.process_content(post.output)
+    # puts post.output
   end
 end

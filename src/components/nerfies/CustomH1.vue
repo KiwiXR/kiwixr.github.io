@@ -4,7 +4,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title e-h1-warn">[H1 NOT ALLOWED]<br><slot></slot></h1>
+            <h1 class="title is-1 publication-title e-h1-warn">[H1 NOT ALLOWED] <slot></slot></h1>
           </div>
         </div>
       </div>
@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import { defineProps, computed } from 'vue';
+import { computed } from 'vue';
 import { parseAttributes } from "@/utils/parseAttrs";
 
 // Define props for the attributes
