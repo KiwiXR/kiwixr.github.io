@@ -21,7 +21,7 @@ more_work:
 ---
 
 ![theory](/assets/images/dusa/core.png)
-{:width='4/5'}
+{:width='3/4'}
 
 ## Abstract
 {:loc='c' width='4/5'}
@@ -38,6 +38,11 @@ Capitalizing on the complementary advantages of generative and discriminative mo
 ![framework](/assets/images/dusa/framework.png)
 
 ## Theoretical Findings
+
+### Quick Visual Reference
+
+![quickref](/assets/images/dusa/quickref.png)
+{:width='3/5'}
 
 ### Semantic Structure of Score Functions
 
