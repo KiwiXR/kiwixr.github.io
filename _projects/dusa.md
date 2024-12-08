@@ -8,7 +8,8 @@ links:
     neurips 24@accept: https://neurips.cc/virtual/2024/poster/94444
     paper@paper: https://openreview.net/forum?id=c7m1HahBNf
     code@github: https://github.com/BIT-DA/DUSA
-    video@video: 
+    video@video: https://neurips.cc/virtual/2024/poster/94444
+    video@bilibili: https://www.bilibili.com/video/av113513821374075/?t=5884.5
     slides@slides: https://neurips.cc/media/neurips-2024/Slides/94444.pdf
     poster@poster: /assets/files/335_dusa_poster.pdf
 #    poster@poster: https://neurips.cc/media/PosterPDFs/NeurIPS%202024/94444.png
