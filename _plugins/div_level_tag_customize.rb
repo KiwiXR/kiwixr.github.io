@@ -5,6 +5,7 @@ require 'nokogiri'
 module Jekyll
   class DivLevelTagCustomize
     @special_tags = %w[table ul ol select li tr option dl dt dd]
+    @whitespace_sensitive_tags = %w[pre code]
     def self.process_content(content)
       components_base_dir = File.join(Dir.pwd, 'src', 'components')
       modified_content = content.dup
@@ -105,7 +106,38 @@ module Jekyll
         # puts new_node.name
         # puts new_node.inner_html
         # puts node.inner_html
-        new_node.inner_html = node.inner_html
+        raw_html = node.inner_html
+        new_node.inner_html = raw_html
+
+        # 针对空白敏感标签应用预设样式
+        tag_name = tags.first
+        if @whitespace_sensitive_tags.include?(tag_name)
+          # puts raw_html
+          processed_html = raw_html.gsub(/(\n|^)( +)/) do |match|
+            # 将连续空格转换为单个元素
+            spaces = $2
+            "#{$1}<span class='indent-container' style='display:inline-block;width:#{spaces.length * 0.5}em'>" +
+              "<span class='indent-char'></span>" * spaces.length +
+              "</span>"
+          end
+          processed_html = processed_html.gsub(/\n/, '<br class="line-break">')
+          # processed_html = processed_html.gsub(/ {2,}/) { |spaces| '&nbsp;' * spaces.length }
+          # puts processed_html
+          new_node.inner_html = processed_html
+
+          # # 应用样式
+          # if tag_config[:style]
+          #   # 保留原有样式并追加新样式
+          #   current_style = new_node['style'] || ''
+          #   new_node['style'] = "#{current_style}; #{tag_config[:style]}".sub(/^; /, '')
+          # end
+
+          # # 应用其他属性
+          # tag_config.each do |key, value|
+          #   next if key == :style # 样式已单独处理
+          #   new_node[key.to_s] = value unless new_node[key.to_s]
+          # end
+        end
         # new_node.content = node.content
         return new_node
       end

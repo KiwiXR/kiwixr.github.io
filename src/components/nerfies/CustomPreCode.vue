@@ -1,9 +1,9 @@
 <template>
   <section class="section">
     <div class="container is-max-desktop content">
-      <pre v-bind="parsedPreAttrs"><code v-bind="parsedCodeAttrs" class="custom-code"><slot></slot></code></pre>
+      <pre v-bind="parsedPreAttrs" class="custom-pre"><code v-bind="parsedCodeAttrs" class="custom-code"><slot></slot></code></pre>
     </div>
-    </section>
+  </section>
 </template>
 
 <script setup>
@@ -28,8 +28,36 @@ const parsedCodeAttrs = computed(() => parseAttributes(props.attr_code)); // Use
 </script>
 
 <style scoped>
-.custom-code {
-  font-family: monospace; /* Ensure it inherits font-family from body */
+.custom-pre {
+  display: block;
+  white-space: pre !important;
+  font-family: monospace;
+  line-height: 1.5;
+}
+.custom-pre > * {
+  display: inline !important;
+}
+.indent-container {
+  display: inline-block;
+  letter-spacing: 0.5em;
+}
+.indent-char {
+  display: inline !important;
+  width: 0.5em;
+}
+.indent-char::after {
+  content: " "; /* 可复制的真实空格 */
+  display: inline;
+  width: 0.5em;
+  letter-spacing: normal !important;
+}
+.line-break {
+  display: block;
+  height: 0;
+}
+.line-break::before {
+  content: "\A"; /* CSS换行符 */
+  white-space: pre;
 }
 .section {
   padding-bottom: 24px;

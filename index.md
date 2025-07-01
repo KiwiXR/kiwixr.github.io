@@ -23,4 +23,4 @@ I am a Master's student at Beijing Institute of Technology (BIT) with focus on s
 ## About This Homepage & Project Pages
 
 + This is a Jekyll + Vue3 solution, source code can be found [here](https://github.com/KiwiXR/kiwixr.github.io).
-+ Project page [syntax](https://kramdown.gettalong.org/quickref.html) supports for Kramdown can be found [here](/projects/example)
++ Project page [syntax](https://kramdown.gettalong.org/quickref.html) supports for Kramdown can be found [here](/projects/example).
