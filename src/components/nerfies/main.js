@@ -12,13 +12,18 @@ async function loadAssets() {
             loadStyles('https://cdn.jsdelivr.net/npm/bulma-slider@2.0.5/dist/css/bulma-slider.min.css'), // bulma-slider
             loadStyles('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css'), // font-awesome
             loadStyles('https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css'), // academicons
+            // loadStyles('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github.min.css'), // github style
             //, favicon.svg
             // Script
             // loadScript('https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'), // jquery should load globally
             loadScript('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js'), // font-awesome
             loadScript('https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.24/dist/js/bulma-carousel.min.js'), // bulma-carousel
             loadScript('https://cdn.jsdelivr.net/npm/bulma-slider@2.0.5/dist/js/bulma-slider.min.js'), // bulma-slider
+            // loadScript('https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js'), // highlight
         ]);
+
+        // 初始化 highlight.js
+        // window.hljs?.highlightAll();
 
         // Now load your index.css
         await import('@assets/nerfies/css/index.css');

@@ -356,7 +356,7 @@ This is a text with a
 footnote[^2].
 
 [^2]:
-And here is the definition.
+    And here is the definition.
 
     > With a quote!
 
