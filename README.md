@@ -9,13 +9,27 @@ A Jekyll + Vue3.js solution.
 3. Jekyll hook plugin parses HTML tags to customized ones
 4. Vue3 implements the customized tags
 
+## How to Deploy & Develop
+
+Use GitHub Actions to deploy: [workflow](.github/workflows/jekyll.yml)
+
+Develop locally:
+1. One-time setups:
+   1. Install Ruby 3.3.5 with Bundler
+   2. Install Node.js 18.14.0
+   3. `npm install`
+2. Run every time the framework changes:
+   1. `npm run build`
+   2. `bundle exec jekyll serve`
+> Note that creation/modification of blogs could be live-loaded.
+
 ## Components/Tags Implemented in Vue3
 
 > https://kramdown.gettalong.org/quickref.html
 
 Note that tags not implemented might be influenced by the styles from cdn
 
-nerfies
+### Nerfies-like
 + [x] Paragraphs: `CustomP` `<p></p>`
 + [x] Headers
   + [x] `CustomH2` `<h2></h2>`
